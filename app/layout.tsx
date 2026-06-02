@@ -8,16 +8,44 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://subho.site"),
+
   title: "Subho | Gaming Profile",
   description: "Developer, gamer, and anime enthusiast.",
   generator: "v0.app",
+
   icons: {
     icon: [
+      { url: "/favicon.ico" },
       { url: "/icon-light-32x32.png", media: "(prefers-color-scheme: light)" },
       { url: "/icon-dark-32x32.png", media: "(prefers-color-scheme: dark)" },
       { url: "/icon.svg", type: "image/svg+xml" },
     ],
     apple: "/apple-icon.png",
+  },
+
+  openGraph: {
+    title: "Subho | Gaming Profile",
+    description: "Developer, gamer, and anime enthusiast.",
+    url: "https://subho.site",
+    siteName: "Subho",
+    images: [
+      {
+        url: "/og-image.gif",
+        width: 1200,
+        height: 630,
+        alt: "Subho Gaming Profile",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Subho | Gaming Profile",
+    description: "Developer, gamer, and anime enthusiast.",
+    images: ["/og-image.gif"],
   },
 };
 
