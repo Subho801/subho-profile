@@ -141,7 +141,7 @@ group-hover:opacity-80
                   subho
                 </span>
                 <span className="ml-[2px] text-[18px] text-zinc-300">
-                  .zip
+                  .site
                 </span>
               </Link>
 

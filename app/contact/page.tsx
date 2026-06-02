@@ -124,7 +124,7 @@ export default function ContactPage() {
       className="ml-[2px] text-[18px] text-zinc-300"
       style={googleSans}
     >
-      .zip
+      .site
     </span>
   </Link>
 
