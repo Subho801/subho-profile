@@ -10,23 +10,18 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL("https://subho.site"),
 
-  title: "Subho | Gaming Profile",
-  description: "Developer, gamer, and anime enthusiast.",
+  title: "Subho ",
+  description: "A personal corner of the internet",
   generator: "v0.app",
 
-  icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/icon-light-32x32.png", media: "(prefers-color-scheme: light)" },
-      { url: "/icon-dark-32x32.png", media: "(prefers-color-scheme: dark)" },
-      { url: "/icon.svg", type: "image/svg+xml" },
-    ],
-    apple: "/apple-icon.png",
-  },
+ icons: {
+  icon: "/favicon.ico",
+  apple: "/apple-icon.png",
+},
 
   openGraph: {
-    title: "Subho | Gaming Profile",
-    description: "Developer, gamer, and anime enthusiast.",
+    title: "Subho ",
+    description: "A personal corner of the internet.",
     url: "https://subho.site",
     siteName: "Subho",
     images: [
@@ -34,7 +29,7 @@ export const metadata: Metadata = {
         url: "/og-image.gif",
         width: 1200,
         height: 630,
-        alt: "Subho Gaming Profile",
+        alt: "Subho",
       },
     ],
     locale: "en_US",
@@ -43,8 +38,8 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Subho | Gaming Profile",
-    description: "Developer, gamer, and anime enthusiast.",
+    title: "Subho ",
+    description: "A personal corner of the internet.",
     images: ["/og-image.gif"],
   },
 };
