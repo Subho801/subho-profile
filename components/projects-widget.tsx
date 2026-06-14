@@ -10,22 +10,22 @@ const projects = [
     description: "An automated bot to fetch free mystery games beforehand",
     icon: "https://files.catbox.moe/v8hwtz.png",
     stars: 124,
-    featured: true,
-  },
-  {
-    name: "Spotivity",
-    description: "A frontend website for listening music together",
-    icon: "https://files.catbox.moe/02ctbv.png",
-    stars: 89,
-    featured: false,
+    href: "https://epicmysterygames.com"
   },
   {
     name: "Driplist",
     description: "Calendar to view what airs when via Moctale.",
     icon: "https://files.catbox.moe/arn84n.png",
     stars: 256,
-    featured: true,
+    href: "#"
   },
+  {
+    name: "Medal TV Quest Notifier",
+    description: "Live Medal TV quest tracker with Discord alerts",
+    icon: "https://files.catbox.moe/rusxk8.png",
+    stars: 37,
+    href: "/medal-quests"
+  }
 ];
 
 const container = {
@@ -97,7 +97,7 @@ export function ProjectsWidget() {
           <motion.a
             key={index}
             variants={item}
-            href="#"
+            href={project.href}
             className="group flex items-center justify-between p-3.5 rounded-xl bg-white/[0.05] hover:bg-white/[0.07] border border-white/[0.06] hover:border-white/[0.1] transition-all duration-300 relative overflow-hidden"
           >
             {/* Hover gradient */}

@@ -520,3 +520,29 @@
   filter: blur(0.8px);
   animation: avatarShine 4s linear infinite;
 }
+@keyframes blink {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.4;
+    transform: scale(1.15);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: #00d2ff;
+  box-shadow: 0 0 8px #00d2ff;
+  animation: blink 1.5s ease-in-out infinite;
+  flex-shrink: 0;
+}

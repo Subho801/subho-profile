@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 },
 
   openGraph: {
-    title: "Subho ",
+    title: "",
     description: "A personal corner of the internet.",
     url: "https://subho.site",
     siteName: "Subho",
