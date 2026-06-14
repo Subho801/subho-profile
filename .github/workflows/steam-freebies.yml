@@ -33,8 +33,8 @@ jobs:
 
       - name: Commit updated Steam freebies
         run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
+          git config user.name "Subho801"
+          git config user.email "lofibeatz95@gmail.com"
           git add public/steam-freebies.json steam_state.json
           git commit -m "Update Steam freebies" || echo "No changes"
           git push
