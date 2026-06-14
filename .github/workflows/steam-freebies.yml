@@ -1,0 +1,40 @@
+name: Steam Freebies Notifier
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  steam-freebies:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run Steam notifier
+        env:
+          ITAD_API_KEY: ${{ secrets.ITAD_API_KEY }}
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          ROLE_PING: ${{ secrets.ROLE_PING }}
+        run: python steam.py
+
+      - name: Commit updated Steam freebies
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add public/steam-freebies.json steam_state.json
+          git commit -m "Update Steam freebies" || echo "No changes"
+          git push
