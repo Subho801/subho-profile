@@ -1,19 +1,18 @@
+import { NextResponse } from "next/server";
+import fs from "fs/promises";
+import path from "path";
+
 export async function GET() {
-  const res = await fetch("https://steamdb.info/upcoming/free/", {
-    headers: {
-      "User-Agent": "Mozilla/5.0",
-      Accept: "text/html",
-    },
-    cache: "no-store",
-  });
+  try {
+    const filePath = path.join(process.cwd(), "public", "steam-freebies.json");
+    const file = await fs.readFile(filePath, "utf-8");
+    const data = JSON.parse(file);
 
-  const html = await res.text();
-
-  return Response.json({
-    status: res.status,
-    length: html.length,
-    hasFreeToKeep: html.includes("Free to Keep"),
-    hasCloudflare: html.toLowerCase().includes("cloudflare"),
-    preview: html.slice(0, 1000),
-  });
+    return NextResponse.json(data);
+  } catch {
+    return NextResponse.json({
+      items: [],
+      updatedAt: null,
+    });
+  }
 }
