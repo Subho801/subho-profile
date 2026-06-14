@@ -23,6 +23,19 @@ function formatDate(ms?: number) {
   });
 }
 
+function formatSteamDate(date?: string) {
+  if (!date) return "Unknown";
+
+  return new Date(date).toLocaleString("en-IN", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+    hour12: true,
+  });
+}
+
 function isActiveQuest(quest: any) {
   const endsAt = quest.config?.endsAt;
   if (!endsAt) return true;
@@ -154,6 +167,7 @@ export default function MedalQuestsPage() {
   const [quests, setQuests] = useState<any[]>([]);
   const [epicNow, setEpicNow] = useState<any[]>([]);
   const [epicUpcoming, setEpicUpcoming] = useState<any[]>([]);
+  const [steamFreebies, setSteamFreebies] = useState<any[]>([]);
   const [amdPromos, setAmdPromos] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -161,9 +175,10 @@ export default function MedalQuestsPage() {
     Promise.all([
       fetch("/api/medal-quests").then((r) => r.json()),
       fetch("/api/epic-freebies").then((r) => r.json()),
+      fetch("/api/steam-freebies").then((r) => r.json()),
       fetch("/api/amd-promotions").then((r) => r.json()),
     ])
-      .then(([medalData, epicData, amdData]) => {
+      .then(([medalData, epicData, steamData, amdData]) => {
         const medalFiltered = (medalData.items || [])
           .filter(isActiveQuest)
           .filter(isGameKeyGiveaway)
@@ -172,6 +187,11 @@ export default function MedalQuestsPage() {
           });
 
         const epicParsed = parseEpicGames(epicData);
+
+        const steamFiltered = (steamData.items || []).filter((item: any) => {
+          const expiry = item.expiry ? new Date(item.expiry).getTime() : null;
+          return !expiry || expiry > Date.now();
+        });
 
         const amdFiltered = (amdData.items || []).filter((item: any) => {
           const keys = Number(item.keysAvailable || 0);
@@ -182,6 +202,7 @@ export default function MedalQuestsPage() {
         setQuests(medalFiltered);
         setEpicNow(epicParsed.freeNow);
         setEpicUpcoming(epicParsed.comingSoon);
+        setSteamFreebies(steamFiltered);
         setAmdPromos(amdFiltered);
         setLoading(false);
       })
@@ -189,14 +210,20 @@ export default function MedalQuestsPage() {
         setQuests([]);
         setEpicNow([]);
         setEpicUpcoming([]);
+        setSteamFreebies([]);
         setAmdPromos([]);
         setLoading(false);
       });
   }, []);
 
   const totalCount = useMemo(
-    () => quests.length + epicNow.length + epicUpcoming.length + amdPromos.length,
-    [quests, epicNow, epicUpcoming, amdPromos]
+    () =>
+      quests.length +
+      epicNow.length +
+      epicUpcoming.length +
+      steamFreebies.length +
+      amdPromos.length,
+    [quests, epicNow, epicUpcoming, steamFreebies, amdPromos]
   );
 
   return (
@@ -208,7 +235,7 @@ export default function MedalQuestsPage() {
           </h1>
 
           <p className="mt-3 max-w-2xl text-sm text-zinc-400">
-            Epic Games freebies, Steam key giveaways, Medal TV quests, AMD rewards and more.
+            Epic Games freebies, Steam 100% off games, Medal TV quests, AMD rewards and more.
           </p>
 
           <div className="mt-4 inline-flex rounded-full border border-white/10 bg-white/[0.05] px-3 py-1 text-xs text-zinc-400">
@@ -331,6 +358,74 @@ export default function MedalQuestsPage() {
                           className="mt-5 inline-flex rounded-xl border border-cyan-400/40 px-4 py-2 text-sm font-black text-cyan-400 transition-all hover:bg-cyan-400 hover:text-black"
                         >
                           View Store
+                        </a>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              )}
+            </section>
+
+            <section className="mb-14 border-t border-white/10 pt-10">
+              <SectionHeader
+                eyebrow="Steam"
+                title="100% Off Games"
+                count={`${steamFreebies.length} free to keep`}
+              />
+
+              {steamFreebies.length === 0 ? (
+                <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-8 text-zinc-400">
+                  No active Steam 100% off games right now.
+                </div>
+              ) : (
+                <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                  {steamFreebies.map((game) => (
+                    <article
+                      key={game.id || game.slug || game.title}
+                      className="group overflow-hidden rounded-3xl border border-white/10 bg-[#121212] transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/30 hover:shadow-[0_0_35px_rgba(34,211,238,0.08)]"
+                    >
+                      {game.image && (
+                        <div className="relative h-48 overflow-hidden">
+                          <Image
+                            src={game.image}
+                            alt={game.title}
+                            fill
+                            unoptimized
+                            className="object-cover transition-transform duration-500 group-hover:scale-105"
+                          />
+
+                          <div className="absolute left-4 top-4">
+                            <FaSteam className="h-7 w-7 text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]" />
+                          </div>
+                        </div>
+                      )}
+
+                      <div className="p-5">
+                        <h2 className="text-lg font-bold text-white">
+                          {game.title}
+                        </h2>
+
+                        <p className="mt-1 text-xs text-zinc-500">
+                          Free to keep
+                          {game.expiry ? ` · Ends ${formatSteamDate(game.expiry)}` : ""}
+                        </p>
+
+                        <div className="mt-3 text-sm">
+                          <span className="mr-2 text-zinc-500 line-through">
+                            {game.regularPrice
+                              ? `${game.regularPrice} ${game.currency || ""}`
+                              : "Paid"}
+                          </span>
+                          <span className="font-black text-cyan-400">FREE</span>
+                        </div>
+
+                        <a
+                          href={game.url || game.itadUrl || "https://store.steampowered.com/"}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="mt-5 inline-flex rounded-xl bg-cyan-400 px-4 py-2 text-sm font-black text-black transition-all hover:scale-105 hover:bg-cyan-300"
+                        >
+                          Get Game
                         </a>
                       </div>
                     </article>
