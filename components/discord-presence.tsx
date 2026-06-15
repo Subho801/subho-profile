@@ -113,8 +113,8 @@ export function DiscordPresence() {
       : "Online";
 
   return (
-    <div className="mx-auto w-full max-w-full">
-      <div className="relative w-full overflow-hidden rounded-[24px] border border-white/[0.08] bg-[#101827] p-4 shadow-[0_20px_50px_rgba(0,0,0,0.45)]">
+    <div className="mx-auto max-w-md">
+  <div className="relative overflow-visible rounded-[24px] border border-white/[0.08] bg-[#101827] p-4 shadow-[0_20px_50px_rgba(0,0,0,0.45)]">
         <video
   src="/discord-nameplate.webm"
   autoPlay
