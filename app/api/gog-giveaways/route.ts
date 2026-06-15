@@ -1,6 +1,6 @@
 export async function GET() {
   try {
-    const claimRes = await fetch("https://www.gog.com/giveaway/claim", {
+    const res = await fetch("https://www.gog.com/giveaway/claim", {
       cache: "no-store",
       headers: {
         "User-Agent": "Mozilla/5.0",
@@ -8,12 +8,20 @@ export async function GET() {
       },
     });
 
-    const claimData = await claimRes.json().catch(() => null);
+    const data = await res.json().catch(() => null);
 
-    if (
-      claimData?.message?.toLowerCase().includes("giveaway has ended") ||
-      claimData?.message?.toLowerCase().includes("ended")
-    ) {
+    const message = String(data?.message || "").toLowerCase();
+
+    if (!data || message.includes("ended") || message.includes("not found")) {
+      return Response.json({
+        source: "gog",
+        count: 0,
+        items: [],
+        message: "No limited-time GOG giveaway right now.",
+      });
+    }
+
+    if (!data?.title && !data?.game && !data?.product) {
       return Response.json({
         source: "gog",
         count: 0,
@@ -27,22 +35,28 @@ export async function GET() {
       count: 1,
       items: [
         {
-          title: claimData?.title || "GOG Limited-Time Giveaway",
+          title:
+            data?.title ||
+            data?.game?.title ||
+            data?.product?.title ||
+            "GOG Limited-Time Giveaway",
           platform: "GOG",
           status: "active",
           url: "https://www.gog.com/giveaway/claim",
-          image: claimData?.image || "",
-          note: "Live giveaway detected from GOG claim endpoint.",
+          image:
+            data?.image ||
+            data?.game?.image ||
+            data?.product?.image ||
+            "",
         },
       ],
     });
   } catch {
-    return Response.json(
-      {
-        error: "Failed to check GOG giveaway",
-        items: [],
-      },
-      { status: 500 }
-    );
+    return Response.json({
+      source: "gog",
+      count: 0,
+      items: [],
+      message: "No limited-time GOG giveaway right now.",
+    });
   }
 }
