@@ -121,7 +121,7 @@ export function DiscordPresence() {
   muted
   loop
   playsInline
-  className="absolute inset-0 h-full w-full object-cover opacity-45"
+  className="absolute inset-[1px] h-[calc(100%-2px)] w-[calc(100%-2px)] rounded-[23px] object-cover opacity-45"
 />
 
 {sideImage && (
@@ -134,7 +134,7 @@ export function DiscordPresence() {
   />
 )}
 
-        <div className="absolute inset-0 rounded-[24px] bg-gradient-to-r from-[#101827]/95 via-[#101827]/65 to-[#101827]/20" />
+        <div className="absolute inset-[1px] rounded-[23px] bg-gradient-to-r from-[#101827]/95 via-[#101827]/65 to-[#101827]/20" />
 
         <div className="relative z-10 flex items-center gap-4">
           <div className="relative h-14 w-14 shrink-0">
