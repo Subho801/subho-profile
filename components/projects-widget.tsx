@@ -20,11 +20,11 @@ const projects = [
     href: "#"
   },
   {
-    name: "Medal TV Quest Notifier",
-    description: "Live Medal TV quest tracker with Discord alerts",
+    name: "Freebies Hub",
+    description: "Track free games, key giveaways, community drops and upcoming leaks.",
     icon: "https://files.catbox.moe/rusxk8.png",
     stars: 37,
-    href: "/medal-quests"
+    href: "/freebies"
   }
 ];
 
