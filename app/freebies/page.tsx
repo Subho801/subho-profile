@@ -17,7 +17,7 @@ const sections = [
       { name: "Steam 100% Off", desc: "Limited free-to-keep games", icon: "🧊", href: "/freebies/steam" },
       { name: "GOG", desc: "DRM-free giveaways", icon: "💿", href: "/freebies/gog" },
       { name: "Microsoft Store", desc: "Store freebies", icon: "🪟", href: "#" },
-      { name: "Prime Gaming", desc: "Monthly game claims", icon: "👑", href: "#" },
+      { name: "Prime Gaming", desc: "Monthly game claims", icon: "👑", href: "/freebies/luna" },
     ],
   },
   {
@@ -40,7 +40,7 @@ const sections = [
     items: [
       { name: "Zeros Group", desc: "Community drops", icon: "🟣", href: "#" },
       { name: "FreeRU", desc: "Free key posts", icon: "🔴", href: "#" },
-      { name: "Gleam Campaigns", desc: "Entry-based giveaways", icon: "✨", href: "#" },
+      { name: "Gleam Campaigns", desc: "Entry-based giveaways", icon: "✨", href: "/freebies/gleam" },
       { name: "Discord Giveaways", desc: "Server giveaways", icon: "💬", href: "#" },
     ],
   },
