@@ -13,23 +13,8 @@
       "currency": "USD",
       "expiry": "2026-07-01T19:00:00+02:00",
       "timestamp": "2026-06-01T23:30:42+02:00",
-      "foundAt": "2026-06-18T16:24:50.591921+00:00"
-    },
-    {
-      "id": "018d937f-3cc5-7116-b8e1-06ca7ccd5d72",
-      "slug": "the-red-lantern",
-      "title": "The Red Lantern",
-      "url": "https://itad.link/019eb740-63a0-7398-a518-409815ecc8e9/",
-      "itadUrl": "https://isthereanydeal.com/game/the-red-lantern/",
-      "image": "https://assets.isthereanydeal.com/018d937f-3cc5-7116-b8e1-06ca7ccd5d72/banner600.jpg?t=1781517022",
-      "discount": 100,
-      "price": "Free",
-      "regularPrice": 13.19,
-      "currency": "USD",
-      "expiry": "2026-06-18T19:00:00+02:00",
-      "timestamp": "2026-06-11T17:18:05+02:00",
-      "foundAt": "2026-06-18T16:24:50.591946+00:00"
+      "foundAt": "2026-06-18T18:44:35.522644+00:00"
     }
   ],
-  "updatedAt": "2026-06-18T16:24:50.592673+00:00"
+  "updatedAt": "2026-06-18T18:44:35.523544+00:00"
 }
