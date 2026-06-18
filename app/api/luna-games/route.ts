@@ -5,6 +5,10 @@ export async function GET() {
       { cache: "no-store" }
     );
 
+    if (!res.ok) {
+      throw new Error("GitHub raw fetch failed");
+    }
+
     const data = await res.json();
     return Response.json(data);
   } catch {
