@@ -116,7 +116,16 @@ function Stat({
 
 function GameCard({ game }: { game: MicrosoftGame }) {
   return (
-    <article className="group overflow-hidden rounded-3xl border border-cyan-400/20 bg-[#101827] transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/50 hover:shadow-[0_0_35px_rgba(34,211,238,0.12)]">
+  <a
+    href={game.url}
+    target="_blank"
+    rel="noreferrer"
+    className="block"
+  >
+    <article
+  onClick={() => window.open(game.url, "_blank")}
+  className="group cursor-pointer overflow-hidden rounded-3xl border border-cyan-400/20 bg-[#101827] transition-all duration-300 hover:-translate-y-2 hover:border-cyan-400/60 hover:shadow-[0_0_35px_rgba(34,211,238,0.15)]"
+>
       <div className="relative h-52 overflow-hidden bg-black">
         <img
           src={game.image}
@@ -172,5 +181,6 @@ function GameCard({ game }: { game: MicrosoftGame }) {
         </div>
       </div>
     </article>
+    </a>
   );
 }
