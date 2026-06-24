@@ -186,10 +186,11 @@ function GameCard({ game }: { game: PrimeGame }) {
 
   return (
     <article
-      className={`group overflow-hidden rounded-3xl border bg-[#101827] transition-all duration-300 hover:-translate-y-1 ${
+      onClick={() => window.open(LUNA_CLAIM_URL, "_blank")}
+      className={`group cursor-pointer overflow-hidden rounded-3xl border bg-[#101827] transition-all duration-300 hover:-translate-y-2 ${
         isExpiringSoon
-          ? "border-red-400/30 hover:border-red-400/60"
-          : "border-blue-400/20 hover:border-blue-400/50"
+          ? "border-red-400/30 hover:border-red-400/60 hover:shadow-[0_0_35px_rgba(248,113,113,0.15)]"
+          : "border-blue-400/20 hover:border-blue-400/60 hover:shadow-[0_0_35px_rgba(59,130,246,0.15)]"
       }`}
     >
       <div className="relative h-44 overflow-hidden bg-black">
@@ -243,6 +244,7 @@ function GameCard({ game }: { game: PrimeGame }) {
             href={LUNA_CLAIM_URL}
             target="_blank"
             rel="noreferrer"
+            onClick={(e) => e.stopPropagation()}
             className="shrink-0 rounded-xl bg-blue-500 px-5 py-3 text-sm font-black text-white transition-all hover:scale-105 hover:bg-blue-400"
           >
             Claim
