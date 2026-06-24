@@ -16,7 +16,7 @@ const sections = [
       { name: "Epic Games", desc: "Weekly free games", icon: "🎁", href: "/freebies/epic" },
       { name: "Steam 100% Off", desc: "Limited free-to-keep games", icon: "🧊", href: "/freebies/steam" },
       { name: "GOG", desc: "DRM-free giveaways", icon: "💿", href: "/freebies/gog" },
-      { name: "Microsoft Store", desc: "Store freebies", icon: "🪟", href: "#" },
+      { name: "Microsoft Store", desc: "Store freebies", icon: "🪟", href: "/freebies/microsoft" },
       { name: "Prime Gaming", desc: "Monthly game claims", icon: "👑", href: "/freebies/prime" },
     ],
   },
