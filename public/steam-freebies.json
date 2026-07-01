@@ -1,20 +1,4 @@
 {
-  "items": [
-    {
-      "id": "0199af19-1543-7036-b17a-43eac57b3642",
-      "slug": "tell-me-why-chapter-1",
-      "title": "Tell Me Why: Chapter 1",
-      "url": "https://itad.link/019e8518-404a-709b-ae47-a4ef949552ea/",
-      "itadUrl": "https://isthereanydeal.com/game/tell-me-why-chapter-1/",
-      "image": "https://assets.isthereanydeal.com/0199af19-1543-7036-b17a-43eac57b3642/banner600.jpg?t=1780349716",
-      "discount": 100,
-      "price": "Free",
-      "regularPrice": 19.99,
-      "currency": "USD",
-      "expiry": "2026-07-01T19:00:00+02:00",
-      "timestamp": "2026-06-01T23:30:42+02:00",
-      "foundAt": "2026-07-01T16:03:30.837390+00:00"
-    }
-  ],
-  "updatedAt": "2026-07-01T16:03:30.838214+00:00"
+  "items": [],
+  "updatedAt": "2026-07-01T18:23:04.666072+00:00"
 }
