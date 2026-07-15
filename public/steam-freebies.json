@@ -13,8 +13,23 @@
       "currency": "USD",
       "expiry": "2026-07-29T19:00:00+02:00",
       "timestamp": "2026-07-15T12:15:56+02:00",
-      "foundAt": "2026-07-15T16:16:01.629793+00:00"
+      "foundAt": "2026-07-15T17:44:59.990459+00:00"
+    },
+    {
+      "id": "018d937f-3094-7123-b03c-4a99b97eca3a",
+      "slug": "catch-me",
+      "title": "Catch Me",
+      "url": "https://itad.link/019f66b8-edd1-7261-a065-1d318e6d9d40/",
+      "itadUrl": "https://isthereanydeal.com/game/catch-me/",
+      "image": "https://assets.isthereanydeal.com/018d937f-3094-7123-b03c-4a99b97eca3a/banner600.jpg?t=1784135113",
+      "discount": 100,
+      "price": "Free",
+      "regularPrice": 9.99,
+      "currency": "USD",
+      "expiry": "2026-07-17T19:00:00+02:00",
+      "timestamp": "2026-07-15T19:00:23+02:00",
+      "foundAt": "2026-07-15T17:44:59.990482+00:00"
     }
   ],
-  "updatedAt": "2026-07-15T16:16:01.630588+00:00"
+  "updatedAt": "2026-07-15T17:44:59.991153+00:00"
 }
