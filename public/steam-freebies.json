@@ -1,4 +1,20 @@
 {
-  "items": [],
-  "updatedAt": "2026-07-15T09:27:14.826588+00:00"
+  "items": [
+    {
+      "id": "019f3b98-727c-7013-b968-29bbeac2294f",
+      "slug": "the-mound-omen-of-cthulhu-lost-explorers-swords-pack",
+      "title": "The Mound: Omen of Cthulhu - Lost Explorers' Swords Pack",
+      "url": "https://itad.link/019f6546-0e5e-7359-a9de-93a24fc0397c/",
+      "itadUrl": "https://isthereanydeal.com/game/the-mound-omen-of-cthulhu-lost-explorers-swords-pack/",
+      "image": "https://assets.isthereanydeal.com/019f3b98-727c-7013-b968-29bbeac2294f/banner600.jpg?t=1784110831",
+      "discount": 100,
+      "price": "Free",
+      "regularPrice": 4.99,
+      "currency": "USD",
+      "expiry": "2026-07-29T19:00:00+02:00",
+      "timestamp": "2026-07-15T12:15:56+02:00",
+      "foundAt": "2026-07-15T11:08:46.587056+00:00"
+    }
+  ],
+  "updatedAt": "2026-07-15T11:08:46.587776+00:00"
 }
