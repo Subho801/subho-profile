@@ -13,7 +13,7 @@
       "currency": "USD",
       "expiry": "2026-07-29T19:00:00+02:00",
       "timestamp": "2026-07-15T12:15:56+02:00",
-      "foundAt": "2026-07-20T16:54:52.150387+00:00"
+      "foundAt": "2026-07-20T18:50:03.138027+00:00"
     },
     {
       "id": "018d937f-43b6-71f3-afa1-c140a6dfbb72",
@@ -21,15 +21,15 @@
       "title": "The Life and Suffering of Sir Brante",
       "url": "https://itad.link/019f7113-307e-70d9-a9f6-35d0f371b2c8/",
       "itadUrl": "https://isthereanydeal.com/game/the-life-and-suffering-of-sir-brante/",
-      "image": "https://assets.isthereanydeal.com/018d937f-43b6-71f3-afa1-c140a6dfbb72/banner600.jpg?t=1784566205",
+      "image": "https://assets.isthereanydeal.com/018d937f-43b6-71f3-afa1-c140a6dfbb72/banner600.jpg?t=1784567130",
       "discount": 100,
       "price": "Free",
       "regularPrice": 27.73,
       "currency": "USD",
       "expiry": "2026-07-23T19:00:00+02:00",
       "timestamp": "2026-07-17T19:16:07+02:00",
-      "foundAt": "2026-07-20T16:54:52.150415+00:00"
+      "foundAt": "2026-07-20T18:50:03.138056+00:00"
     }
   ],
-  "updatedAt": "2026-07-20T16:54:52.151277+00:00"
+  "updatedAt": "2026-07-20T18:50:03.138949+00:00"
 }
