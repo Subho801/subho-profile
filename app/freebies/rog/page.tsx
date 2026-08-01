@@ -131,6 +131,22 @@ const REGION_FLAGS: Record<string, string> = {
   ea: "🇰🇪", // East Africa (Kenya)
 };
 
+function timeAgo(date: string) {
+  const diff = Math.floor(
+    (Date.now() - new Date(date).getTime()) / 1000
+  );
+
+  if (diff < 60) return `${diff} sec ago`;
+
+  if (diff < 3600)
+    return `${Math.floor(diff / 60)} min ago`;
+
+  if (diff < 86400)
+    return `${Math.floor(diff / 3600)} hr ago`;
+
+  return `${Math.floor(diff / 86400)} day ago`;
+}
+
 export default function RogRewardsPage() {
   const [data, setData] = useState<RogData | null>(null);
   const [loading, setLoading] = useState(true);
@@ -257,9 +273,23 @@ export default function RogRewardsPage() {
 
           </div>
 
-          <p className="max-w-2xl text-sm text-zinc-400">
-            Live ASUS ROG Elite rewards synchronized across every supported region.
-          </p>
+         <div className="space-y-2">
+
+  <p className="max-w-2xl text-sm text-zinc-400">
+    Live ASUS ROG Elite rewards synchronized across every supported region.
+  </p>
+
+  <div className="flex items-center gap-2 text-sm text-zinc-500">
+
+    <span>🕒</span>
+
+    <span>
+      Updated {timeAgo(data.updated)}
+    </span>
+
+  </div>
+
+</div>
 
           <div className="mt-6 grid gap-4 md:grid-cols-3">
 
