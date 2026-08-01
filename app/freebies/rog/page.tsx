@@ -3,6 +3,13 @@
 import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 type Reward = {
   id: number;
@@ -79,49 +86,34 @@ const REGION_NAMES: Record<string, string> = {
 };
 
 const REGION_FLAGS: Record<string, string> = {
+  global: "🌍",
   in: "🇮🇳",
   us: "🇺🇸",
   uk: "🇬🇧",
-  ru: "🇷🇺",
-  pl: "🇵🇱",
+  "ca-en": "🇨🇦",
   fr: "🇫🇷",
-  de: "🇩🇪",
-  it: "🇮🇹",
-  es: "🇪🇸",
-  nl: "🇳🇱",
-  be: "🇧🇪",
-  se: "🇸🇪",
-  no: "🇳🇴",
-  dk: "🇩🇰",
-  fi: "🇫🇮",
-  cz: "🇨🇿",
-  sk: "🇸🇰",
-  hu: "🇭🇺",
-  ro: "🇷🇴",
-  tr: "🇹🇷",
-  ua: "🇺🇦",
-  jp: "🇯🇵",
+  ru: "🇷🇺",
   kr: "🇰🇷",
-  tw: "🇹🇼",
-  hk: "🇭🇰",
   sg: "🇸🇬",
   my: "🇲🇾",
   ph: "🇵🇭",
   id: "🇮🇩",
-  th: "🇹🇭",
-  vn: "🇻🇳",
-  au: "🇦🇺",
-  nz: "🇳🇿",
   mx: "🇲🇽",
-  br: "🇧🇷",
-  ar: "🇦🇷",
-  cl: "🇨🇱",
+  pl: "🇵🇱",
+  ro: "🇷🇴",
+  hu: "🇭🇺",
+  sk: "🇸🇰",
+  cz: "🇨🇿",
   il: "🇮🇱",
-  sa: "🇸🇦",
-  ae: "🇦🇪",
+  tr: "🇹🇷",
+  "ua-ua": "🇺🇦",
   za: "🇿🇦",
-  eg: "🇪🇬",
+  "eg-en": "🇪🇬",
+  "sa-ar": "🇸🇦",
+  "sa-en": "🇦🇪",
+  "rs-en": "🇷🇸",
   wa: "🌍",
+  ea: "🌍",
 };
 
 export default function RogRewardsPage() {
@@ -307,18 +299,27 @@ export default function RogRewardsPage() {
             className="rounded-2xl border border-white/10 bg-[#121212] px-4 py-3 outline-none transition focus:border-red-500/40"
           />
 
-          <select
-            value={region}
-            onChange={(e) => setRegion(e.target.value)}
-            className="rounded-2xl border border-white/10 bg-[#121212] px-4 py-3"
-          >
+          <Select
+  value={region}
+  onValueChange={setRegion}
+>
+  <SelectTrigger className="rounded-2xl border border-white/10 bg-[#121212] px-4 py-3">
+    <SelectValue />
+  </SelectTrigger>
 
-            {regionOptions.map((r) => (
-              <option key={r} value={r}>
-                {REGION_NAMES[r] ?? r.toUpperCase()}
-              </option>
-            ))}
-          </select>
+  <SelectContent>
+
+    {regionOptions.map((r) => (
+      <SelectItem
+        key={r}
+        value={r}
+      >
+        {REGION_FLAGS[r]} {REGION_NAMES[r]}
+      </SelectItem>
+    ))}
+
+  </SelectContent>
+</Select>
 
           <select
             value={status}
