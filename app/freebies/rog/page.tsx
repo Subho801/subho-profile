@@ -431,22 +431,8 @@ export default function RogRewardsPage() {
             <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
 
               <AnimatePresence mode="popLayout">
-  {rewards.map((reward) => (
-    <motion.article
-      key={reward.id}
-      layout
-      initial={{ opacity: 0, y: 15 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -15 }}
-      transition={{
-        duration: 0.25,
-        ease: "easeOut",
-      }}
-      className="group overflow-hidden rounded-3xl ..."
-    >
-          </motion.article>
-  ))}
-</AnimatePresence>
+                {rewards.map((reward) => {
+
 
                 const badge =
                   STATUS[
@@ -461,8 +447,17 @@ export default function RogRewardsPage() {
 
                 return (
 
-                  <article
-                    key={reward.id}
+                  <motion.article
+  layout
+  key={reward.id}
+  initial={{ opacity: 0, y: 15 }}
+  animate={{ opacity: 1, y: 0 }}
+  exit={{ opacity: 0, y: -15 }}
+  transition={{
+    duration: 0.25,
+    ease: "easeOut",
+  }}
+                    
                     className="group overflow-hidden rounded-3xl border border-white/10 bg-[#121212] transition-all duration-300 hover:-translate-y-1 hover:border-red-500/40 hover:shadow-[0_0_35px_rgba(239,68,68,.12)]"
                   >
 
@@ -554,18 +549,20 @@ export default function RogRewardsPage() {
 
                     </div>
 
-                  </article>
+                  </motion.article>
 
                 );
 
               })}
 
+            </AnimatePresence>
+              
             </div>
 
           )}
 
         </section>
-
+        
       </div>
 
     </main>
