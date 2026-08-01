@@ -18,7 +18,13 @@ async function getSteamGrid(appid: number) {
       }
     );
 
-    const data = await res.json();
+    const text = await res.text();
+
+    console.log("Steam Status:", res.status);
+    console.log("Content-Type:", res.headers.get("content-type"));
+    console.log("Response:", text.substring(0, 500));
+
+    const data = JSON.parse(text);
     return data?.data?.[0]?.url || null;
   } catch {
     return null;
