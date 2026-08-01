@@ -28,6 +28,37 @@ type RogData = {
   items: Reward[];
 };
 
+function normalizeTitle(title: string) {
+  return title
+    .toLowerCase()
+
+    .replace(/[™®]/g, "")
+
+    .replace(/\(.*?\)/g, "")
+
+    .replace(/game code/g, "")
+
+    .replace(/gift card/g, "")
+
+    .replace(/giftcard/g, "")
+
+    .replace(/digital code/g, "")
+
+    .replace(/steam key/g, "")
+
+    .replace(/steam code/g, "")
+
+    .replace(/download code/g, "")
+
+    .replace(/code/g, "")
+
+    .replace(/-/g, " ")
+
+    .replace(/\s+/g, " ")
+
+    .trim();
+}
+
 const STATUS = {
   1: {
     text: "Available",
@@ -132,7 +163,7 @@ export default function RogRewardsPage() {
 
   for (const reward of items) {
 
-    const key = reward.title.trim();
+    const key = normalizeTitle(reward.title);
 
     if (!groups.has(key)) {
 
