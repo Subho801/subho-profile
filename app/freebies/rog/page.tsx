@@ -303,6 +303,8 @@ export default function RogRewardsPage() {
         </section>
 
         {/* Filters */}
+        
+  <div className="mb-8 grid gap-4 lg:grid-cols-[0.9fr_1fr_1fr_1fr]">
 
        <div className="relative">
   <Search className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-500" />
@@ -522,7 +524,7 @@ export default function RogRewardsPage() {
 >
   Redeem
   <ArrowUpRight className="h-4 w-4" />
-</a>
+
 
                       </a>
 
