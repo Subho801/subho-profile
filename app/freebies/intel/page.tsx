@@ -41,7 +41,7 @@ export default async function IntelPage() {
             <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-500/10 ring-1 ring-sky-400/20">
 
               <Image
-                src="/logos/intel.png"
+                src="/intel.png"
                 alt="Intel"
                 width={36}
                 height={36}
