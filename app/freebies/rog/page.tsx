@@ -29,33 +29,51 @@ type RogData = {
 };
 
 function normalizeTitle(title: string) {
+  const t = title.toLowerCase();
+
+  // Global Gift Cards
+  const gift = t.match(/(\d+)\s*usd/i);
+  if (gift && t.includes("global")) {
+    return `${gift[1]} USD Global Gift Card`;
+  }
+
+  // Steam Wallet
+  const steam = t.match(/(\d+)\s*usd/i);
+  if (steam && t.includes("steam")) {
+    return `${steam[1]} USD Steam Wallet`;
+  }
+
+  // Google Play
+  const google = t.match(/(\d+)\s*usd/i);
+  if (google && t.includes("google")) {
+    return `${google[1]} USD Google Play`;
+  }
+
+  // Xbox
+  const xbox = t.match(/(\d+)\s*usd/i);
+  if (xbox && t.includes("xbox")) {
+    return `${xbox[1]} USD Xbox`;
+  }
+
+  // PlayStation
+  const ps = t.match(/(\d+)\s*usd/i);
+  if (ps && (t.includes("playstation") || t.includes("psn"))) {
+    return `${ps[1]} USD PlayStation`;
+  }
+
   return title
     .toLowerCase()
-
     .replace(/[™®]/g, "")
-
     .replace(/\(.*?\)/g, "")
-
     .replace(/game code/g, "")
-
     .replace(/gift card/g, "")
-
     .replace(/giftcard/g, "")
-
-    .replace(/digital code/g, "")
-
     .replace(/steam key/g, "")
-
-    .replace(/steam code/g, "")
-
-    .replace(/download code/g, "")
-
+    .replace(/digital code/g, "")
     .replace(/code/g, "")
-
+    .replace(/_/g, " ")
     .replace(/-/g, " ")
-
     .replace(/\s+/g, " ")
-
     .trim();
 }
 
@@ -163,7 +181,7 @@ export default function RogRewardsPage() {
 
   for (const reward of items) {
 
-    const key = normalizeTitle(reward.title);
+    const key = `${normalizeTitle(reward.title)}-${reward.status}`;
 
     if (!groups.has(key)) {
 
