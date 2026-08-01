@@ -65,7 +65,7 @@ export default async function IntelPage() {
 
           <div className="mt-4 grid gap-3 sm:grid-cols-2">
 
-            className="rounded-2xl border border-white/10 bg-black/25 px-5 py-3"
+            <div className="rounded-2xl border border-white/10 bg-black/25 px-5 py-3"
 
               <div className="text-2xl">🎟</div>
 
