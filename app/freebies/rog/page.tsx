@@ -307,14 +307,14 @@ export default function RogRewardsPage() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search rewards..."
-            className="rounded-2xl border border-white/10 bg-[#121212] px-4 py-3 outline-none transition focus:border-red-500/40"
+            className="h-12 rounded-2xl border border-white/10 bg-[#121212] px-4 outline-none transition focus:border-red-500/40"
           />
 
           <Select
   value={region}
   onValueChange={setRegion}
 >
-  <SelectTrigger className="rounded-2xl border border-white/10 bg-[#121212] px-4 py-3">
+  <SelectTrigger className="h-12 w-full rounded-2xl border border-white/10 bg-[#121212] px-4">
     <SelectValue />
   </SelectTrigger>
 
@@ -332,27 +332,31 @@ export default function RogRewardsPage() {
   </SelectContent>
 </Select>
 
-          <select
-            value={status}
-            onChange={(e) => setStatus(e.target.value)}
-            className="rounded-2xl border border-white/10 bg-[#121212] px-4 py-3"
-          >
-            <option value="all">All Status</option>
-            <option value="1">Available</option>
-            <option value="2">Locked</option>
-            <option value="3">Sold Out</option>
-            <option value="4">Ended</option>
-          </select>
+          <Select value={status} onValueChange={setStatus}>
+           <SelectTrigger className="h-12 w-full rounded-2xl border border-white/10 bg-[#121212] px-4">
+            <SelectValue />
+           </SelectTrigger>
 
-          <select
-            value={sort}
-            onChange={(e) => setSort(e.target.value)}
-            className="rounded-2xl border border-white/10 bg-[#121212] px-4 py-3"
-          >
-            <option value="title">Sort by Name</option>
-            <option value="cost">Sort by Cost</option>
-            <option value="status">Sort by Status</option>
-          </select>
+          <SelectContent>
+            <SelectItem value="all">All Status</SelectItem>
+            <SelectItem value="1">Available</SelectItem>
+            <SelectItem value="2">Locked</SelectItem>
+            <SelectItem value="3">Sold Out</SelectItem>
+            <SelectItem value="4">Ended</SelectItem>
+          </SelectContent>
+     </Select>
+            
+          <Select value={sort} onValueChange={setSort}>
+  <SelectTrigger className="h-12 w-full rounded-2xl border border-white/10 bg-[#121212] px-4">
+    <SelectValue />
+  </SelectTrigger>
+
+  <SelectContent>
+    <SelectItem value="title">Sort by Name</SelectItem>
+    <SelectItem value="cost">Sort by Cost</SelectItem>
+    <SelectItem value="status">Sort by Status</SelectItem>
+  </SelectContent>
+</Select>
 
         </div>
                 <section className="mb-14">
