@@ -371,7 +371,6 @@ export default function RogRewardsPage() {
     </Select>
   </div>
 
-</div>
 
         </div>
                 <section className="mb-14">
