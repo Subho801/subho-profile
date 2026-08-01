@@ -303,67 +303,75 @@ export default function RogRewardsPage() {
         </section>
 
         {/* Filters */}
-        
-  <div className="mb-8 grid gap-4 lg:grid-cols-[1fr_1.15fr_1.15fr_1.15fr]">
 
-       <div className="relative">
-  <Search className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-500" />
+<div className="mb-8 grid gap-4 lg:grid-cols-[1fr_1.15fr_1.15fr_1.15fr]">
 
-  <Input
-    value={search}
-    onChange={(e) => setSearch(e.target.value)}
-    placeholder="Search rewards..."
-    className="h-12 rounded-2xl border-white/10 bg-[#121212] pl-10 focus-visible:ring-red-500/30"
-  />
+  {/* Search */}
+
+  <div className="relative w-full">
+    <Search className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-500" />
+
+    <Input
+      value={search}
+      onChange={(e) => setSearch(e.target.value)}
+      placeholder="Search rewards..."
+      className="h-12 w-full rounded-2xl border border-white/10 bg-[#121212] pl-10 focus-visible:ring-red-500/30"
+    />
+  </div>
+
+  {/* Region */}
+
+  <div className="w-full">
+    <Select value={region} onValueChange={setRegion}>
+      <SelectTrigger className="h-12 w-full rounded-2xl border border-white/10 bg-[#121212] px-4">
+        <SelectValue />
+      </SelectTrigger>
+
+      <SelectContent>
+        {regionOptions.map((r) => (
+          <SelectItem key={r} value={r}>
+            {REGION_FLAGS[r]} {REGION_NAMES[r]}
+          </SelectItem>
+        ))}
+      </SelectContent>
+    </Select>
+  </div>
+
+  {/* Status */}
+
+  <div className="w-full">
+    <Select value={status} onValueChange={setStatus}>
+      <SelectTrigger className="h-12 w-full rounded-2xl border border-white/10 bg-[#121212] px-4">
+        <SelectValue />
+      </SelectTrigger>
+
+      <SelectContent>
+        <SelectItem value="all">All Status</SelectItem>
+        <SelectItem value="1">Available</SelectItem>
+        <SelectItem value="2">Locked</SelectItem>
+        <SelectItem value="3">Sold Out</SelectItem>
+        <SelectItem value="4">Ended</SelectItem>
+      </SelectContent>
+    </Select>
+  </div>
+
+  {/* Sort */}
+
+  <div className="w-full">
+    <Select value={sort} onValueChange={setSort}>
+      <SelectTrigger className="h-12 w-full rounded-2xl border border-white/10 bg-[#121212] px-4">
+        <SelectValue />
+      </SelectTrigger>
+
+      <SelectContent>
+        <SelectItem value="title">Sort by Name</SelectItem>
+        <SelectItem value="cost">Sort by Cost</SelectItem>
+        <SelectItem value="status">Sort by Status</SelectItem>
+      </SelectContent>
+    </Select>
+  </div>
+
 </div>
-
-          <Select
-  value={region}
-  onValueChange={setRegion}
->
-  <SelectTrigger className="h-12 w-full rounded-2xl border border-white/10 bg-[#121212] px-4">
-    <SelectValue />
-  </SelectTrigger>
-
-  <SelectContent>
-
-    {regionOptions.map((r) => (
-      <SelectItem
-        key={r}
-        value={r}
-      >
-        {REGION_FLAGS[r]} {REGION_NAMES[r]}
-      </SelectItem>
-    ))}
-
-  </SelectContent>
-</Select>
-
-          <Select value={status} onValueChange={setStatus}>
-           <SelectTrigger className="h-12 w-full rounded-2xl border border-white/10 bg-[#121212] px-4">
-            <SelectValue />
-           </SelectTrigger>
-
-          <SelectContent>
-            <SelectItem value="all">All Status</SelectItem>
-            <SelectItem value="1">Available</SelectItem>
-            <SelectItem value="2">Locked</SelectItem>
-            <SelectItem value="3">Sold Out</SelectItem>
-            <SelectItem value="4">Ended</SelectItem>
-          </SelectContent>
-     </Select>
-            
-          <Select value={sort} onValueChange={setSort}>
-  <SelectTrigger className="h-12 w-full rounded-2xl border border-white/10 bg-[#121212] px-4">
-    <SelectValue />
-  </SelectTrigger>
-
-  <SelectContent>
-    <SelectItem value="title">Sort by Name</SelectItem>
-    <SelectItem value="cost">Sort by Cost</SelectItem>
-    <SelectItem value="status">Sort by Status</SelectItem>
-  </SelectContent>
-</Select>
 
         </div>
                 <section className="mb-14">
