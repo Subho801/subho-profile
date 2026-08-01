@@ -10,6 +10,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Search } from "lucide-react";
+import { Input } from "@/components/ui/input";
 
 type Reward = {
   id: number;
@@ -303,12 +305,12 @@ export default function RogRewardsPage() {
 
         <div className="mb-8 grid gap-4 lg:grid-cols-[0.85fr_1fr_1fr_1fr]">
 
-          <input
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            placeholder="Search rewards..."
-            className="h-12 w-full rounded-2xl border border-white/10 bg-[#121212] px-4 outline-none transition focus:border-red-500/40"
-          />
+          <Input
+  value={search}
+  onChange={(e) => setSearch(e.target.value)}
+  placeholder="Search rewards..."
+  className="h-12 rounded-2xl border-white/10 bg-[#121212] focus-visible:ring-red-500/30"
+/>
 
           <Select
   value={region}
