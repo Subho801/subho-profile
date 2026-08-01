@@ -8,56 +8,6 @@ const stats = [
   { label: "Upcoming Leaks", value: "4", icon: "🕵️" },
 ];
 
-const sections = [
-  {
-    title: "Free Games",
-    icon: "🎮",
-    desc: "Official store freebies and 100% off games.",
-    items: [
-      { name: "Epic Games", desc: "Weekly free games", icon: "🎁", href: "/freebies/epic" },
-      { name: "Steam 100% Off", desc: "Limited free-to-keep games", icon: "🧊", href: "/freebies/steam" },
-      { name: "GOG", desc: "DRM-free giveaways", icon: "💿", href: "/freebies/gog" },
-      { name: "Microsoft Store", desc: "Store freebies", icon: "🪟", href: "/freebies/microsoft" },
-      { name: "Prime Gaming", desc: "Monthly game claims", icon: "👑", href: "/freebies/prime" },
-    ],
-  },
-  {
-    title: "Key Giveaways",
-    icon: "🔑",
-    desc: "Limited keys, rewards and promo drops.",
-    items: [
-      { name: "Medal TV", desc: "Quest rewards", icon: "🎖️", href: "/freebies/medal" },
-      { name: "AMD Rewards", desc: "Promo keys", icon: "🔥", href: "/freebies/amd" },
-      { name: "Alienware Arena", desc: "Gaming keys", icon: "👽", href: "#" },
-      { name: "ROG Elite", desc: "Regional rewards", icon: "⚡", href: "#" },
-      { name: "HP OMEN", desc: "Reward drops", icon: "💎", href: "#" },
-      { name: intel?.source || "Intel Gaming Access", desc: intel?.title || "Intel promos", icon: "🔵", href: "/freebies/intel" },
-    ],
-  },
-  {
-    title: "Community Giveaways",
-    icon: "🎁",
-    desc: "Community and third-party giveaways.",
-    items: [
-      { name: "Zeros Group", desc: "Community drops", icon: "🟣", href: "#" },
-      { name: "FreeRU", desc: "Free key posts", icon: "🔴", href: "#" },
-      { name: "Gleam Campaigns", desc: "Entry-based giveaways", icon: "✨", href: "/freebies/gleam" },
-      { name: "Discord Giveaways", desc: "Server giveaways", icon: "💬", href: "#" },
-    ],
-  },
-  {
-    title: "Upcoming & Leaks",
-    icon: "🕵️",
-    desc: "Upcoming, leaked or not-yet-claimable rewards.",
-    items: [
-      { name: "Epic Mystery Games", desc: "Vault leaks", icon: "🔮", href: "#" },
-      { name: "AMD Upcoming", desc: "Future rewards", icon: "🔥", href: "#" },
-      { name: "Alienware Upcoming", desc: "Upcoming key drops", icon: "👽", href: "#" },
-      { name: "ROG Upcoming", desc: "Future region rewards", icon: "⚡", href: "#" },
-    ],
-  },
-];
-
 const featured = [
   { name: "Epic Games", desc: "2 active freebies", meta: "Ends soon", icon: "🎮" },
   { name: "Medal TV", desc: "Quest reward live", meta: "Claim now", icon: "🎖️" },
@@ -66,6 +16,62 @@ const featured = [
 
 export default async function FreebiesPage() {
   const intel = await getIntel();
+
+  const sections = [
+    {
+      title: "Free Games",
+      icon: "🎮",
+      desc: "Official store freebies and 100% off games.",
+      items: [
+        { name: "Epic Games", desc: "Weekly free games", icon: "🎁", href: "/freebies/epic" },
+        { name: "Steam 100% Off", desc: "Limited free-to-keep games", icon: "🧊", href: "/freebies/steam" },
+        { name: "GOG", desc: "DRM-free giveaways", icon: "💿", href: "/freebies/gog" },
+        { name: "Microsoft Store", desc: "Store freebies", icon: "🪟", href: "/freebies/microsoft" },
+        { name: "Prime Gaming", desc: "Monthly game claims", icon: "👑", href: "/freebies/prime" },
+      ],
+    },
+    {
+      title: "Key Giveaways",
+      icon: "🔑",
+      desc: "Limited keys, rewards and promo drops.",
+      items: [
+        { name: "Medal TV", desc: "Quest rewards", icon: "🎖️", href: "/freebies/medal" },
+        { name: "AMD Rewards", desc: "Promo keys", icon: "🔥", href: "/freebies/amd" },
+        { name: "Alienware Arena", desc: "Gaming keys", icon: "👽", href: "#" },
+        { name: "ROG Elite", desc: "Regional rewards", icon: "⚡", href: "#" },
+        { name: "HP OMEN", desc: "Reward drops", icon: "💎", href: "#" },
+        {
+          name: intel?.source ?? "Intel Gaming Access",
+          desc: intel?.title ?? "Intel promos",
+          icon: "🔵",
+          href: "/freebies/intel",
+        },
+      ],
+    },
+    {
+      title: "Community Giveaways",
+      icon: "🎁",
+      desc: "Community and third-party giveaways.",
+      items: [
+        { name: "Zeros Group", desc: "Community drops", icon: "🟣", href: "#" },
+        { name: "FreeRU", desc: "Free key posts", icon: "🔴", href: "#" },
+        { name: "Gleam Campaigns", desc: "Entry-based giveaways", icon: "✨", href: "/freebies/gleam" },
+        { name: "Discord Giveaways", desc: "Server giveaways", icon: "💬", href: "#" },
+      ],
+    },
+    {
+      title: "Upcoming & Leaks",
+      icon: "🕵️",
+      desc: "Upcoming, leaked or not-yet-claimable rewards.",
+      items: [
+        { name: "Epic Mystery Games", desc: "Vault leaks", icon: "🔮", href: "#" },
+        { name: "AMD Upcoming", desc: "Future rewards", icon: "🔥", href: "#" },
+        { name: "Alienware Upcoming", desc: "Upcoming key drops", icon: "👽", href: "#" },
+        { name: "ROG Upcoming", desc: "Future region rewards", icon: "⚡", href: "#" },
+      ],
+    },
+  ];
+
   return (
     <main className="min-h-screen px-5 py-10 text-white">
       <div className="mx-auto max-w-6xl">
