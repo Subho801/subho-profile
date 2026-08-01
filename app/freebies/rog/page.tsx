@@ -29,52 +29,63 @@ type RogData = {
 };
 
 function normalizeTitle(title: string) {
-  const t = title.toLowerCase();
+  let t = title
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase();
 
-  // Global Gift Cards
-  const gift = t.match(/(\d+)\s*usd/i);
-  if (gift && t.includes("global")) {
-    return `${gift[1]} USD Global Gift Card`;
-  }
+  // unify currencies
+  t = t
+    .replace(/10\$/g, "10 usd")
+    .replace(/5\$/g, "5 usd")
+    .replace(/20\$/g, "20 usd")
+    .replace(/30\$/g, "30 usd")
+    .replace(/50\$/g, "50 usd");
 
-  // Steam Wallet
-  const steam = t.match(/(\d+)\s*usd/i);
-  if (steam && t.includes("steam")) {
-    return `${steam[1]} USD Steam Wallet`;
-  }
+  // unify "dollar"
+  t = t.replace(/\bdolar\b/g, "usd");
 
-  // Google Play
-  const google = t.match(/(\d+)\s*usd/i);
-  if (google && t.includes("google")) {
-    return `${google[1]} USD Google Play`;
-  }
+  // remove useless words
+  t = t.replace(
+    /\b(global|gift|giftcard|gift card|gogift|code|game code|steam key|digital code|steam|wallet)\b/g,
+    ""
+  );
 
-  // Xbox
-  const xbox = t.match(/(\d+)\s*usd/i);
-  if (xbox && t.includes("xbox")) {
-    return `${xbox[1]} USD Xbox`;
-  }
+  // remove translations of "gift card"
+  t = t.replace(
+    /\b(
+      karta|
+      kart|
+      karta|
+      karti|
+      darkova|
+      darcekova|
+      hediye|
+      podarunkowa|
+      bon|
+      regalo|
+      carte|
+      cadeaubon
+    )\b/gx,
+    ""
+  );
 
-  // PlayStation
-  const ps = t.match(/(\d+)\s*usd/i);
-  if (ps && (t.includes("playstation") || t.includes("psn"))) {
-    return `${ps[1]} USD PlayStation`;
-  }
+  // remove years
+  t = t.replace(/\b20\d\d\b/g, "");
 
-  return title
-    .toLowerCase()
-    .replace(/[™®]/g, "")
-    .replace(/\(.*?\)/g, "")
-    .replace(/game code/g, "")
-    .replace(/gift card/g, "")
-    .replace(/giftcard/g, "")
-    .replace(/steam key/g, "")
-    .replace(/digital code/g, "")
-    .replace(/code/g, "")
-    .replace(/_/g, " ")
-    .replace(/-/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
+  // remove version numbers
+  t = t.replace(/\b\d{4,8}\b/g, "");
+
+  t = t.replace(/[_-]/g, " ");
+
+  t = t.replace(/\s+/g, " ").trim();
+
+  const usd = t.match(/(\d+)\s*usd/);
+
+  if (usd)
+    return `${usd[1]} USD`;
+
+  return t;
 }
 
 const STATUS = {
