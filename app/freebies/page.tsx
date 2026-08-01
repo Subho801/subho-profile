@@ -31,7 +31,7 @@ const sections = [
       { name: "Alienware Arena", desc: "Gaming keys", icon: "👽", href: "#" },
       { name: "ROG Elite", desc: "Regional rewards", icon: "⚡", href: "#" },
       { name: "HP OMEN", desc: "Reward drops", icon: "💎", href: "#" },
-      { name: "Intel Gaming Access", desc: "Intel promos", icon: "🔵", href: "#" },
+      { name: intel?.source || "Intel Gaming Access", desc: intel?.title || "Intel promos", icon: "🔵", href: "/freebies/intel" },
     ],
   },
   {
