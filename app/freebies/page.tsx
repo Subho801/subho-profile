@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getIntel } from "@/app/lib/getIntel";
 
 const stats = [
   { label: "Active Freebies", value: "17", icon: "🎮" },
@@ -63,7 +64,8 @@ const featured = [
   { name: "AMD Rewards", desc: "Promo keys available", meta: "Limited", icon: "🔥" },
 ];
 
-export default function FreebiesPage() {
+export default async function FreebiesPage() {
+  const intel = await getIntel();
   return (
     <main className="min-h-screen px-5 py-10 text-white">
       <div className="mx-auto max-w-6xl">
