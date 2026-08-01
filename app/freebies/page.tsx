@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getIntel } from "@/app/lib/getIntel";
+import { getIntel } from "./data/getIntel";
 
 const stats = [
   { label: "Active Freebies", value: "17", icon: "🎮" },
