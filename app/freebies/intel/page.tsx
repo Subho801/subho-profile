@@ -2,12 +2,16 @@ import Link from "next/link";
 import Image from "next/image";
 import { getIntel } from "../data/getIntel";
 
-function formatDate(date: string) {
-  return new Date(date).toLocaleDateString("en-GB", {
-    day: "numeric",
-    month: "short",
-    year: "numeric",
-  });
+function getEndsIn(date: string) {
+  const end = new Date(date).getTime();
+  const now = Date.now();
+
+  const days = Math.ceil((end - now) / (1000 * 60 * 60 * 24));
+
+  if (days <= 0) return "Ended";
+  if (days === 1) return "1 day";
+
+  return `${days} days`;
 }
 
 export default async function IntelPage() {
@@ -39,18 +43,15 @@ export default async function IntelPage() {
   <div className="mb-5 flex items-center gap-4">
 
     <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-500/10 ring-1 ring-sky-400/20">
-
       <Image
         src="/intel.png"
         alt="Intel"
         width={36}
         height={36}
       />
-
     </div>
 
     <div>
-
       <p className="text-xs font-black uppercase tracking-[0.22em] text-sky-400">
         Intel Gaming Access
       </p>
@@ -58,30 +59,15 @@ export default async function IntelPage() {
       <h1 className="text-5xl font-bold">
         Intel Giveaways
       </h1>
-
     </div>
 
   </div>
 
-  <div className="grid gap-4 sm:grid-cols-2 max-w-3xl">
+  <div className="grid max-w-4xl gap-4 sm:grid-cols-3">
 
     <div className="rounded-2xl border border-white/10 bg-black/25 px-5 py-4">
 
       <div className="text-2xl">🎟</div>
-
-      <div className="mt-2 text-2xl font-bold">
-        1
-      </div>
-
-      <div className="text-sm text-white/45">
-        Active Giveaway
-      </div>
-
-    </div>
-
-    <div className="rounded-2xl border border-white/10 bg-black/25 px-5 py-4">
-
-      <div className="text-2xl">🏷</div>
 
       <div className="mt-2 text-2xl font-bold">
         {intel.type}
@@ -89,6 +75,34 @@ export default async function IntelPage() {
 
       <div className="text-sm text-white/45">
         Giveaway Type
+      </div>
+
+    </div>
+
+    <div className="rounded-2xl border border-white/10 bg-black/25 px-5 py-4">
+
+      <div className="text-2xl">✅</div>
+
+      <div className="mt-2 text-2xl font-bold">
+        Active
+      </div>
+
+      <div className="text-sm text-white/45">
+        Giveaway Status
+      </div>
+
+    </div>
+
+    <div className="rounded-2xl border border-white/10 bg-black/25 px-5 py-4">
+
+      <div className="text-2xl">⏰</div>
+
+      <div className="mt-2 text-2xl font-bold text-sky-400">
+        {getEndsIn(intel.ends_at)}
+      </div>
+
+      <div className="text-sm text-white/45">
+        Ends In
       </div>
 
     </div>
@@ -161,7 +175,7 @@ export default async function IntelPage() {
                 </div>
 
                 <div className="mt-1 text-xl font-bold text-sky-400">
-                  {formatDate(intel.ends_at)}
+                  {getEndsIn(intel.ends_at)}
                 </div>
 
               </div>
