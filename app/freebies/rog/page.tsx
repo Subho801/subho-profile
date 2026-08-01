@@ -64,6 +64,52 @@ const REGION_NAMES: Record<string, string> = {
   jp: "Japan",
 };
 
+const REGION_FLAGS: Record<string, string> = {
+  in: "🇮🇳",
+  us: "🇺🇸",
+  uk: "🇬🇧",
+  ru: "🇷🇺",
+  pl: "🇵🇱",
+  fr: "🇫🇷",
+  de: "🇩🇪",
+  it: "🇮🇹",
+  es: "🇪🇸",
+  nl: "🇳🇱",
+  be: "🇧🇪",
+  se: "🇸🇪",
+  no: "🇳🇴",
+  dk: "🇩🇰",
+  fi: "🇫🇮",
+  cz: "🇨🇿",
+  sk: "🇸🇰",
+  hu: "🇭🇺",
+  ro: "🇷🇴",
+  tr: "🇹🇷",
+  ua: "🇺🇦",
+  jp: "🇯🇵",
+  kr: "🇰🇷",
+  tw: "🇹🇼",
+  hk: "🇭🇰",
+  sg: "🇸🇬",
+  my: "🇲🇾",
+  ph: "🇵🇭",
+  id: "🇮🇩",
+  th: "🇹🇭",
+  vn: "🇻🇳",
+  au: "🇦🇺",
+  nz: "🇳🇿",
+  mx: "🇲🇽",
+  br: "🇧🇷",
+  ar: "🇦🇷",
+  cl: "🇨🇱",
+  il: "🇮🇱",
+  sa: "🇸🇦",
+  ae: "🇦🇪",
+  za: "🇿🇦",
+  eg: "🇪🇬",
+  wa: "🌍",
+};
+
 export default function RogRewardsPage() {
   const [data, setData] = useState<RogData | null>(null);
   const [loading, setLoading] = useState(true);
@@ -393,7 +439,10 @@ export default function RogRewardsPage() {
 
                       <div className="absolute right-4 top-4 rounded-full bg-black/70 px-3 py-1 text-xs font-bold backdrop-blur">
 
-                        🌍 {REGION_NAMES[reward.region] ?? reward.region.toUpperCase()}
+                        <>
+                         {REGION_FLAGS[reward.region] ?? "🌍"}{" "}
+                         {REGION_NAMES[reward.region] ?? reward.region.toUpperCase()}
+                       </>
 
                       </div>
 
