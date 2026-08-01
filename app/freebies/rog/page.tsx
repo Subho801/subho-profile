@@ -14,66 +14,11 @@ type Reward = {
   region: string;
 };
 
-type GroupedReward = {
-  title: string;
-  image: string | null;
-  lowestCost: number;
-  bestStatus: number;
-  regions: Reward[];
-};
-
 type RogData = {
   updated: string;
   count: number;
   items: Reward[];
 };
-
-function normalizeTitle(title: string) {
-  let t = title
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase();
-
-  // unify currencies
-  t = t
-    .replace(/10\$/g, "10 usd")
-    .replace(/5\$/g, "5 usd")
-    .replace(/20\$/g, "20 usd")
-    .replace(/30\$/g, "30 usd")
-    .replace(/50\$/g, "50 usd");
-
-  // unify "dollar"
-  t = t.replace(/\bdolar\b/g, "usd");
-
-  // remove useless words
-  t = t.replace(
-    /\b(global|gift|giftcard|gift card|gogift|code|game code|steam key|digital code|steam|wallet)\b/g,
-    ""
-  );
-
-  // remove translations of "gift card"
-  t = t.replace(
-  /(karta|kart|karti|darkova|darcekova|hediye|podarunkowa|bon|regalo|carte|cadeaubon)/g,
-  ""
-);
-
-  // remove years
-  t = t.replace(/\b20\d\d\b/g, "");
-
-  // remove version numbers
-  t = t.replace(/\b\d{4,8}\b/g, "");
-
-  t = t.replace(/[_-]/g, " ");
-
-  t = t.replace(/\s+/g, " ").trim();
-
-  const usd = t.match(/(\d+)\s*usd/);
-
-  if (usd)
-    return `${usd[1]} USD`;
-
-  return t;
-}
 
 const STATUS = {
   1: {
@@ -124,7 +69,7 @@ export default function RogRewardsPage() {
   const [loading, setLoading] = useState(true);
 
   const [search, setSearch] = useState("");
-  const [region, setRegion] = useState("all");
+  const [region, setRegion] = useState("in");
   const [status, setStatus] = useState("all");
   const [sort, setSort] = useState("title");
 
@@ -165,76 +110,28 @@ export default function RogRewardsPage() {
     );
   }
 
-  if (region !== "all") {
-    items = items.filter((i) => i.region === region);
-  }
+  // Always filter by selected region
+  items = items.filter((i) => i.region === region);
 
   if (status !== "all") {
-    items = items.filter(
-      (i) => String(i.status) === status
-    );
+    items = items.filter((i) => String(i.status) === status);
   }
-
-  const groups = new Map<string, GroupedReward>();
-
-  for (const reward of items) {
-
-    const key = `${normalizeTitle(reward.title)}-${reward.status}`;
-
-    if (!groups.has(key)) {
-
-      groups.set(key, {
-        title: normalizeTitle(reward.title),
-        image: reward.image,
-        lowestCost: reward.cost,
-        bestStatus: reward.status,
-        regions: [reward],
-      });
-
-      continue;
-
-    }
-
-    const existing = groups.get(key)!;
-
-    existing.regions.push(reward);
-
-    if (reward.cost < existing.lowestCost)
-      existing.lowestCost = reward.cost;
-
-    if (reward.status < existing.bestStatus)
-      existing.bestStatus = reward.status;
-
-    if (!existing.image && reward.image)
-      existing.image = reward.image;
-  }
-
-  let result = Array.from(groups.values());
 
   switch (sort) {
-
     case "cost":
-      result.sort(
-        (a, b) => a.lowestCost - b.lowestCost
-      );
+      items.sort((a, b) => a.cost - b.cost);
       break;
 
     case "status":
-      result.sort(
-        (a, b) => a.bestStatus - b.bestStatus
-      );
+      items.sort((a, b) => a.status - b.status);
       break;
 
     default:
-      result.sort((a, b) =>
-        a.title.localeCompare(b.title)
-      );
+      items.sort((a, b) => a.title.localeCompare(b.title));
   }
 
-  return result;
-
+  return items;
 }, [data, search, region, status, sort]);
-
   if (loading) {
     return (
       <main className="flex min-h-screen items-center justify-center bg-background text-zinc-400">
@@ -355,7 +252,6 @@ export default function RogRewardsPage() {
             onChange={(e) => setRegion(e.target.value)}
             className="rounded-2xl border border-white/10 bg-[#121212] px-4 py-3"
           >
-            <option value="all">All Regions</option>
 
             {regionOptions.map((r) => (
               <option key={r} value={r}>
@@ -441,7 +337,7 @@ export default function RogRewardsPage() {
 
                 const badge =
                   STATUS[
-                    reward.bestStatus as keyof typeof STATUS
+                    reward.status as keyof typeof STATUS
                   ] ??
                   {
                     text: "Unknown",
@@ -453,7 +349,7 @@ export default function RogRewardsPage() {
                 return (
 
                   <article
-                    key={`${reward.title}-${reward.regions.length}`}
+                    key={reward.id}
                     className="group overflow-hidden rounded-3xl border border-white/10 bg-[#121212] transition-all duration-300 hover:-translate-y-1 hover:border-red-500/40 hover:shadow-[0_0_35px_rgba(239,68,68,.12)]"
                   >
 
@@ -497,7 +393,7 @@ export default function RogRewardsPage() {
 
                       <div className="absolute right-4 top-4 rounded-full bg-black/70 px-3 py-1 text-xs font-bold backdrop-blur">
 
-                        🌍 {reward.regions.length} Region{reward.regions.length > 1 ? "s" : ""}
+                        🌍 {REGION_NAMES[reward.region] ?? reward.region.toUpperCase()}
 
                       </div>
 
@@ -525,36 +421,11 @@ export default function RogRewardsPage() {
 
                         <div className="mt-1 text-2xl font-black text-red-400">
 
-                          💎 {reward.lowestCost}
+                          💎 {reward.cost}
 
                         </div>
 
                       </div>
-
-                      {/* Regions */}
-
-<div className="mt-4 flex flex-wrap gap-2">
-
-  {reward.regions.slice(0, 5).map((r) => (
-
-    <span
-      key={r.region}
-      className="rounded-full bg-white/5 px-2 py-1 text-xs"
-    >
-      {REGION_NAMES[r.region] ?? r.region.toUpperCase()}
-    </span>
-
-  ))}
-
-  {reward.regions.length > 5 && (
-
-    <span className="rounded-full bg-white/5 px-2 py-1 text-xs">
-      +{reward.regions.length - 5}
-    </span>
-
-  )}
-
-</div>
 
                       <a
                         href="https://rog.asus.com/elite/reward/all"
