@@ -12,7 +12,14 @@ type Reward = {
   type: number;
   image: string | null;
   region: string;
-  reward_url?: string | null;
+};
+
+type GroupedReward = {
+  title: string;
+  image: string | null;
+  lowestCost: number;
+  bestStatus: number;
+  regions: Reward[];
 };
 
 type RogData = {
@@ -101,43 +108,85 @@ export default function RogRewardsPage() {
   }, [data]);
 
   const rewards = useMemo(() => {
-    if (!data) return [];
+  if (!data) return [];
 
-    let items = [...data.items];
+  let items = [...data.items];
 
-    if (search.trim()) {
-      items = items.filter((i) =>
-        i.title.toLowerCase().includes(search.toLowerCase())
+  if (search.trim()) {
+    items = items.filter((i) =>
+      i.title.toLowerCase().includes(search.toLowerCase())
+    );
+  }
+
+  if (region !== "all") {
+    items = items.filter((i) => i.region === region);
+  }
+
+  if (status !== "all") {
+    items = items.filter(
+      (i) => String(i.status) === status
+    );
+  }
+
+  const groups = new Map<string, GroupedReward>();
+
+  for (const reward of items) {
+
+    const key = reward.title.trim();
+
+    if (!groups.has(key)) {
+
+      groups.set(key, {
+        title: reward.title,
+        image: reward.image,
+        lowestCost: reward.cost,
+        bestStatus: reward.status,
+        regions: [reward],
+      });
+
+      continue;
+
+    }
+
+    const existing = groups.get(key)!;
+
+    existing.regions.push(reward);
+
+    if (reward.cost < existing.lowestCost)
+      existing.lowestCost = reward.cost;
+
+    if (reward.status < existing.bestStatus)
+      existing.bestStatus = reward.status;
+
+    if (!existing.image && reward.image)
+      existing.image = reward.image;
+  }
+
+  let result = Array.from(groups.values());
+
+  switch (sort) {
+
+    case "cost":
+      result.sort(
+        (a, b) => a.lowestCost - b.lowestCost
       );
-    }
+      break;
 
-    if (region !== "all") {
-      items = items.filter((i) => i.region === region);
-    }
-
-    if (status !== "all") {
-      items = items.filter(
-        (i) => String(i.status) === status
+    case "status":
+      result.sort(
+        (a, b) => a.bestStatus - b.bestStatus
       );
-    }
+      break;
 
-    switch (sort) {
-      case "cost":
-        items.sort((a, b) => a.cost - b.cost);
-        break;
+    default:
+      result.sort((a, b) =>
+        a.title.localeCompare(b.title)
+      );
+  }
 
-      case "status":
-        items.sort((a, b) => a.status - b.status);
-        break;
+  return result;
 
-      default:
-        items.sort((a, b) =>
-          a.title.localeCompare(b.title)
-        );
-    }
-
-    return items;
-  }, [data, search, region, status, sort]);
+}, [data, search, region, status, sort]);
 
   if (loading) {
     return (
@@ -345,7 +394,7 @@ export default function RogRewardsPage() {
 
                 const badge =
                   STATUS[
-                    reward.status as keyof typeof STATUS
+                    reward.bestStatus as keyof typeof STATUS
                   ] ??
                   {
                     text: "Unknown",
@@ -357,7 +406,7 @@ export default function RogRewardsPage() {
                 return (
 
                   <article
-                    key={`${reward.region}-${reward.id}`}
+                    key={`${reward.regions.length}-${reward.id}`}
                     className="group overflow-hidden rounded-3xl border border-white/10 bg-[#121212] transition-all duration-300 hover:-translate-y-1 hover:border-red-500/40 hover:shadow-[0_0_35px_rgba(239,68,68,.12)]"
                   >
 
@@ -401,7 +450,7 @@ export default function RogRewardsPage() {
 
                       <div className="absolute right-4 top-4 rounded-full bg-black/70 px-3 py-1 text-xs font-bold backdrop-blur">
 
-                        🌍 {REGION_NAMES[reward.region] ?? reward.region.toUpperCase()}
+                        🌍 {reward.regions.length} Regions ?? reward.region.toUpperCase()}
 
                       </div>
 
@@ -429,11 +478,36 @@ export default function RogRewardsPage() {
 
                         <div className="mt-1 text-2xl font-black text-red-400">
 
-                          💎 {reward.cost}
+                          💎 {reward.lowestCost}
 
                         </div>
 
                       </div>
+
+                      {/* Regions */}
+
+<div className="mt-4 flex flex-wrap gap-2">
+
+  {reward.regions.slice(0, 5).map((r) => (
+
+    <span
+      key={r.region}
+      className="rounded-full bg-white/5 px-2 py-1 text-xs"
+    >
+      {REGION_NAMES[r.region] ?? r.region.toUpperCase()}
+    </span>
+
+  ))}
+
+  {reward.regions.length > 5 && (
+
+    <span className="rounded-full bg-white/5 px-2 py-1 text-xs">
+      +{reward.regions.length - 5}
+    </span>
+
+  )}
+
+</div>
 
                       <a
                         href="https://rog.asus.com/elite/reward/all"
