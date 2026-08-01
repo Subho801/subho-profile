@@ -399,7 +399,7 @@ export default function RogRewardsPage() {
 
                     </div>
 
-                    <div className="flex h-[270px] flex-col p-5">
+                    <div className="flex flex-col p-5">
 
                       <div className="min-h-[76px]">
 
