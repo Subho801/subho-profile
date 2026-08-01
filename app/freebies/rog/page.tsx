@@ -197,7 +197,7 @@ export default function RogRewardsPage() {
     if (!groups.has(key)) {
 
       groups.set(key, {
-        title: reward.title,
+        title: normalizeTitle(reward.title),
         image: reward.image,
         lowestCost: reward.cost,
         bestStatus: reward.status,
