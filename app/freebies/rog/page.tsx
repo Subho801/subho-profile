@@ -399,9 +399,9 @@ export default function RogRewardsPage() {
 
                     </div>
 
-                    <div className="flex h-[250px] flex-col p-5">
+                    <div className="flex h-[270px] flex-col p-5">
 
-                      <div className="min-h-[68px]">
+                      <div className="min-h-[76px]">
 
                         <h2 className="line-clamp-2 text-lg font-bold text-white">
 
@@ -411,7 +411,7 @@ export default function RogRewardsPage() {
 
                       </div>
 
-                      <div className="mt-5 rounded-2xl border border-red-500/10 bg-red-500/[0.05] p-4">
+                      <div className="mt-6 rounded-2xl border border-red-500/10 bg-red-500/[0.05] px-5 py-4">
 
                         <div className="text-[10px] font-bold uppercase tracking-wider text-zinc-500">
 
@@ -419,22 +419,21 @@ export default function RogRewardsPage() {
 
                         </div>
 
-                        <div className="mt-1 text-2xl font-black text-red-400">
-
-                          💎 {reward.cost}
-
-                        </div>
-
+                       <div className="mt-2 flex items-center gap-2 text-3xl font-black text-red-400">
+                         <span>💎</span>
+                         <span>{reward.cost}</span>
+                       </div>
+ 
                       </div>
 
                       <a
                         href="https://rog.asus.com/elite/reward/all"
                         target="_blank"
                         rel="noreferrer"
-                        className="mt-auto inline-flex w-fit rounded-xl bg-red-500 px-6 py-3 text-sm font-black text-white transition-all hover:scale-105 hover:bg-red-400"
+                        className="mt-6 flex w-full items-center justify-center rounded-2xl bg-red-500 py-3 text-sm font-black text-white transition hover:bg-red-400"
                       >
 
-                        Open Reward
+                        Redeem
 
                       </a>
 
