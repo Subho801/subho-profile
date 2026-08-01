@@ -517,8 +517,6 @@ export default function RogRewardsPage() {
                         rel="noreferrer"
                         className="mt-6 flex w-full items-center justify-center rounded-2xl bg-red-500 py-3 text-sm font-black text-white transition hover:bg-red-400"
                       >
-
-                        <a
   ...
   className="mt-6 flex w-full items-center justify-center gap-2 rounded-2xl bg-red-500 py-3 text-sm font-black text-white transition hover:bg-red-400"
 >
