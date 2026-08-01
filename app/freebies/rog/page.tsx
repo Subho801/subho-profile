@@ -36,7 +36,7 @@ const STATUS = {
     text: "Available",
     color:
       "border-green-500/30 bg-green-500/10 text-green-400",
-    icon: "🟢",
+    icon: "✅",
   },
   2: {
     text: "Locked",
@@ -48,7 +48,7 @@ const STATUS = {
     text: "Sold Out",
     color:
       "border-red-500/30 bg-red-500/10 text-red-400",
-    icon: "🔴",
+    icon: "❌",
   },
   4: {
     text: "Ended",
@@ -351,7 +351,7 @@ export default function RogRewardsPage() {
             <div className="rounded-2xl border border-white/10 bg-black/25 p-4 transition-all duration-300 hover:border-red-500/30 hover:bg-red-500/[0.04] hover:-translate-y-1">
 
               <div className="text-2xl font-bold text-green-400">
-                🟢 {available}
+                ✅ {available}
               </div>
 
               <div className="text-sm text-zinc-500">
