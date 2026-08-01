@@ -3,6 +3,9 @@
 import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Search } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { ArrowUpRight } from "lucide-react";
 import {
   Select,
   SelectContent,
@@ -10,8 +13,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Search } from "lucide-react";
-import { Input } from "@/components/ui/input";
 
 type Reward = {
   id: number;
@@ -261,7 +262,7 @@ export default function RogRewardsPage() {
 
           <div className="mt-6 grid gap-4 md:grid-cols-3">
 
-            <div className="rounded-2xl border border-white/10 bg-black/25 p-4">
+            <div className="rounded-2xl border border-white/10 bg-black/25 p-4 transition-all duration-300 hover:border-red-500/30 hover:bg-red-500/[0.04] hover:-translate-y-1">
 
               <div className="text-2xl font-bold">
                 🌍 {regions}
@@ -273,7 +274,7 @@ export default function RogRewardsPage() {
 
             </div>
 
-            <div className="rounded-2xl border border-white/10 bg-black/25 p-4">
+            <div className="rounded-2xl border border-white/10 bg-black/25 p-4 transition-all duration-300 hover:border-red-500/30 hover:bg-red-500/[0.04] hover:-translate-y-1">
 
               <div className="text-2xl font-bold">
                 🎁 {data.count}
@@ -285,7 +286,7 @@ export default function RogRewardsPage() {
 
             </div>
 
-            <div className="rounded-2xl border border-white/10 bg-black/25 p-4">
+            <div className="rounded-2xl border border-white/10 bg-black/25 p-4 transition-all duration-300 hover:border-red-500/30 hover:bg-red-500/[0.04] hover:-translate-y-1">
 
               <div className="text-2xl font-bold text-green-400">
                 🟢 {available}
@@ -303,14 +304,16 @@ export default function RogRewardsPage() {
 
         {/* Filters */}
 
-        <div className="mb-8 grid gap-4 lg:grid-cols-[0.85fr_1fr_1fr_1fr]">
+       <div className="relative">
+  <Search className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-500" />
 
-          <Input
-  value={search}
-  onChange={(e) => setSearch(e.target.value)}
-  placeholder="Search rewards..."
-  className="h-12 rounded-2xl border-white/10 bg-[#121212] focus-visible:ring-red-500/30"
-/>
+  <Input
+    value={search}
+    onChange={(e) => setSearch(e.target.value)}
+    placeholder="Search rewards..."
+    className="h-12 rounded-2xl border-white/10 bg-[#121212] pl-10 focus-visible:ring-red-500/30"
+  />
+</div>
 
           <Select
   value={region}
@@ -471,7 +474,10 @@ export default function RogRewardsPage() {
 
                       <div className="absolute right-4 top-4 rounded-full bg-black/70 px-3 py-1 text-xs font-bold backdrop-blur">
 
-                         {REGION_NAMES[reward.region] ?? reward.region.toUpperCase()}
+                         <>
+                          {REGION_FLAGS[reward.region]}{" "}
+                          {REGION_NAMES[reward.region] ?? reward.region.toUpperCase()}
+                        </>
                        
 
                       </div>
@@ -512,7 +518,13 @@ export default function RogRewardsPage() {
                         className="mt-6 flex w-full items-center justify-center rounded-2xl bg-red-500 py-3 text-sm font-black text-white transition hover:bg-red-400"
                       >
 
-                        Redeem
+                        <a
+  ...
+  className="mt-6 flex w-full items-center justify-center gap-2 rounded-2xl bg-red-500 py-3 text-sm font-black text-white transition hover:bg-red-400"
+>
+  Redeem
+  <ArrowUpRight className="h-4 w-4" />
+</a>
 
                       </a>
 
