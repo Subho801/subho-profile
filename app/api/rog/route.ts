@@ -1,6 +1,6 @@
 export async function GET() {
   const res = await fetch(
-    "https://cdn.jsdelivr.net/gh/Subho801/rog-rewards-notifier@main/website/rog.json",
+    "https://cdn.jsdelivr.net/gh/Subho801/rog-rewards-data@main/website/rog.json",
     {
       next: {
         revalidate: 300,
