@@ -304,7 +304,7 @@ export default function RogRewardsPage() {
 
         {/* Filters */}
 
-<div className="mb-8 grid gap-4 lg:grid-cols-[1fr_1.15fr_1.15fr_1.15fr]">
+<div className="mb-8 grid gap-4 lg:grid-cols-4">
 
   {/* Search */}
 
