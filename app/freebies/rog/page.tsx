@@ -476,10 +476,9 @@ export default function RogRewardsPage() {
 
                       <div className="absolute right-4 top-4 rounded-full bg-black/70 px-3 py-1 text-xs font-bold backdrop-blur">
 
-                         <>
-                          {REGION_FLAGS[reward.region]}{" "}
-                          {REGION_NAMES[reward.region] ?? reward.region.toUpperCase()}
-                        </>
+                       {REGION_FLAGS[reward.region] ?? "🌍"}{" "}
+                       {REGION_NAMES[reward.region] ?? reward.region.toUpperCase()}             
+            
                        
 
                       </div>
@@ -514,19 +513,14 @@ export default function RogRewardsPage() {
                       </div>
 
                       <a
-                        href="https://rog.asus.com/elite/reward/all"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="mt-6 flex w-full items-center justify-center rounded-2xl bg-red-500 py-3 text-sm font-black text-white transition hover:bg-red-400"
-                      >
-  ...
+  href="https://rog.asus.com/elite/reward/all"
+  target="_blank"
+  rel="noreferrer"
   className="mt-6 flex w-full items-center justify-center gap-2 rounded-2xl bg-red-500 py-3 text-sm font-black text-white transition hover:bg-red-400"
 >
   Redeem
   <ArrowUpRight className="h-4 w-4" />
-
-
-                      </a>
+</a>
 
                     </div>
 
