@@ -34,70 +34,68 @@ export default async function IntelPage() {
 
         {/* Hero */}
 
-        <section className="mb-8 max-w-5xl rounded-[32px] border border-sky-400/10 bg-gradient-to-br from-sky-500/[0.10] via-white/[0.03] to-transparent p-5">
-          
-          <div className="mb-4 flex items-center gap-4">
+<section className="mb-8 rounded-[32px] border border-sky-400/10 bg-gradient-to-br from-sky-500/[0.10] via-white/[0.03] to-transparent p-7">
 
-            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-sky-500/10 ring-1 ring-sky-400/20">
+  <div className="mb-5 flex items-center gap-4">
 
-              <Image
-                src="/intel.png"
-                alt="Intel"
-                width={34}
-                height={34}
-              />
+    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-500/10 ring-1 ring-sky-400/20">
 
-            </div>
+      <Image
+        src="/intel.png"
+        alt="Intel"
+        width={36}
+        height={36}
+      />
 
-            <div>
+    </div>
 
-              <p className="text-xs font-black uppercase tracking-[0.22em] text-sky-400">
-                Intel Gaming Access
-              </p>
+    <div>
 
-              <h1 className="text-4xl font-bold">
-                Intel Giveaways
-              </h1>
+      <p className="text-xs font-black uppercase tracking-[0.22em] text-sky-400">
+        Intel Gaming Access
+      </p>
 
-            </div>
+      <h1 className="text-5xl font-bold">
+        Intel Giveaways
+      </h1>
 
-          </div>
+    </div>
 
-          <div className="mt-4 grid gap-3 sm:grid-cols-2">
+  </div>
 
-            <div className="rounded-2xl border border-white/10 bg-black/25 px-5 py-3"
+  <div className="grid gap-4 sm:grid-cols-2 max-w-3xl">
 
-              <div className="text-2xl">🎟</div>
+    <div className="rounded-2xl border border-white/10 bg-black/25 px-5 py-4">
 
-              <div className="mt-1 text-xl font-bold">
-                1
-              </div>
+      <div className="text-2xl">🎟</div>
 
-              <div className="text-sm text-white/45">
-                Active Giveaway
-              </div>
+      <div className="mt-2 text-2xl font-bold">
+        1
+      </div>
 
-            </div>
+      <div className="text-sm text-white/45">
+        Active Giveaway
+      </div>
 
-           <div className="rounded-2xl border border-white/10 bg-black/25 px-5 py-3"
+    </div>
 
-              <div className="text-2xl">🏷</div>
+    <div className="rounded-2xl border border-white/10 bg-black/25 px-5 py-4">
 
-              <div className="mt-1 text-xl font-bold">
-                {intel.type}
-              </div>
+      <div className="text-2xl">🏷</div>
 
-              <div className="text-sm text-white/45">
-                Giveaway Type
-              </div>
+      <div className="mt-2 text-2xl font-bold">
+        {intel.type}
+      </div>
 
-            </div>
+      <div className="text-sm text-white/45">
+        Giveaway Type
+      </div>
 
-          </div>
+    </div>
 
-        </section>
+  </div>
 
-        {/* Section */}
+</section>
 
         <div className="mb-6">
 
@@ -130,7 +128,7 @@ export default async function IntelPage() {
                 alt={intel.title}
                 fill
                 unoptimized
-                className="object-contain transition-transform duration-500 group-hover:scale-105"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
 
               <div className="absolute left-4 top-4 rounded-xl bg-black/60 p-2 backdrop-blur">
