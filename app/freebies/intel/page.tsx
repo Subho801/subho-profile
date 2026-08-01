@@ -88,7 +88,7 @@ export default async function IntelPage() {
       </div>
 
       <div className="text-sm text-white/45">
-        Giveaway Status
+        Status
       </div>
 
     </div>
@@ -124,7 +124,10 @@ export default async function IntelPage() {
             <p className="text-[13px] font-black uppercase tracking-wider text-white">
               Current Giveaway
             </p>
-
+            <span className="ml-2 rounded-full border border-sky-400/20 bg-sky-400/[0.08] px-2 py-0.5 text-[11px] text-zinc-400">
+              1 available
+            </span>
+            
           </div>
 
         </div>
@@ -162,7 +165,7 @@ export default async function IntelPage() {
 
       <div className="flex h-[270px] flex-col p-5">
 
-        <div className="min-h-[72px]">
+        <div className="min-h-[64px]">
 
           <h2 className="line-clamp-2 text-lg font-bold text-white">
             {intel.title}
@@ -186,7 +189,7 @@ export default async function IntelPage() {
           href={intel.url}
           target="_blank"
           rel="noreferrer"
-          className="mt-auto inline-flex w-fit rounded-xl bg-sky-500 px-6 py-3 text-sm font-black text-white transition-all duration-300 hover:scale-105 hover:bg-sky-400"
+          className="mt-auto inline-flex w-fit rounded-xl bg-sky-500 px-6 py-3 text-sm font-black text-white transition-all hover:scale-105 hover:bg-sky-400"
         >
           Open Giveaway
         </a>
