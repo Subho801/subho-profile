@@ -439,10 +439,8 @@ export default function RogRewardsPage() {
 
                       <div className="absolute right-4 top-4 rounded-full bg-black/70 px-3 py-1 text-xs font-bold backdrop-blur">
 
-                        <>
-                         {REGION_FLAGS[reward.region] ?? "🌍"}{" "}
                          {REGION_NAMES[reward.region] ?? reward.region.toUpperCase()}
-                       </>
+                       
 
                       </div>
 
