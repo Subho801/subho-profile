@@ -63,7 +63,7 @@ export default async function IntelPage() {
 
   </div>
 
-  <div className="grid max-w-4xl gap-4 sm:grid-cols-3">
+  <div className="grid w-full gap-4 md:grid-cols-3">
 
     <div className="rounded-2xl border border-white/10 bg-black/25 px-5 py-4">
 
@@ -201,3 +201,7 @@ export default async function IntelPage() {
   </div>
 
 </section>
+      </div>
+    </main>
+  );
+}
