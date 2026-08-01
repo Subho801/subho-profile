@@ -129,73 +129,72 @@ export default async function IntelPage() {
 
         </div>
 
-        {/* Card */}
+        {/* Cards */}
 
-        <div className="max-w-md">
+<section className="mb-14">
 
-          <article className="group overflow-hidden rounded-3xl border border-white/10 bg-[#121212] transition-all duration-300 hover:-translate-y-1 hover:border-sky-400/35 hover:shadow-[0_0_35px_rgba(56,189,248,.12)]">
+  <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
 
-            <div className="relative h-52 bg-black">
+    <article className="group overflow-hidden rounded-3xl border border-white/10 bg-[#121212] transition-all duration-300 hover:-translate-y-1 hover:border-sky-400/35 hover:shadow-[0_0_35px_rgba(56,189,248,.12)]">
 
-              <Image
-                src={intel.image}
-                alt={intel.title}
-                fill
-                unoptimized
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-              />
+      <div className="relative h-48 overflow-hidden">
 
-              <div className="absolute left-4 top-4 rounded-xl bg-black/60 p-2 backdrop-blur">
+        <Image
+          src={intel.image}
+          alt={intel.title}
+          fill
+          unoptimized
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+        />
 
-                <Image
-                  src="/intel.png"
-                  alt="Intel"
-                  width={24}
-                  height={24}
-                />
+        <div className="absolute left-4 top-4 flex h-10 w-10 items-center justify-center rounded-xl bg-black/60 backdrop-blur">
 
-              </div>
-
-            </div>
-
-            <div className="flex flex-col p-5">
-
-              <div className="min-h-[72px]">
-
-                <h2 className="line-clamp-2 text-lg font-bold">
-                  {intel.title}
-                </h2>
-
-              </div>
-
-              <div className="mt-4 rounded-2xl border border-sky-400/10 bg-sky-500/[0.04] p-3">
-
-                <div className="text-[10px] font-bold uppercase tracking-wide text-zinc-500">
-                  Ends
-                </div>
-
-                <div className="mt-1 text-xl font-bold text-sky-400">
-                  {getEndsIn(intel.ends_at)}
-                </div>
-
-              </div>
-
-              <a
-                href={intel.url}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-5 inline-flex w-fit rounded-xl bg-sky-500 px-6 py-3 text-sm font-black text-white transition-all hover:scale-105 hover:bg-sky-400"
-              >
-                Open Giveaway
-              </a>
-
-            </div>
-
-          </article>
+          <Image
+            src="/intel.png"
+            alt="Intel"
+            width={22}
+            height={22}
+          />
 
         </div>
 
       </div>
-    </main>
-  );
-}
+
+      <div className="flex h-[270px] flex-col p-5">
+
+        <div className="min-h-[72px]">
+
+          <h2 className="line-clamp-2 text-lg font-bold text-white">
+            {intel.title}
+          </h2>
+
+        </div>
+
+        <div className="mt-4 rounded-2xl border border-sky-400/10 bg-sky-500/[0.04] p-3">
+
+          <div className="text-[10px] font-bold uppercase tracking-wide text-zinc-500">
+            Ends In
+          </div>
+
+          <div className="mt-1 text-2xl font-black text-sky-400">
+            ⏰ {getEndsIn(intel.ends_at)}
+          </div>
+
+        </div>
+
+        <a
+          href={intel.url}
+          target="_blank"
+          rel="noreferrer"
+          className="mt-auto inline-flex w-fit rounded-xl bg-sky-500 px-6 py-3 text-sm font-black text-white transition-all duration-300 hover:scale-105 hover:bg-sky-400"
+        >
+          Open Giveaway
+        </a>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
