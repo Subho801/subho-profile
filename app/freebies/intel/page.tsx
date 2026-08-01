@@ -79,7 +79,7 @@ export default async function IntelPage() {
 
             </div>
 
-            <div className="rounded-2xl border border-white/10 bg-black/25 p-4">
+           <div className="rounded-2xl border border-white/10 bg-black/25 px-5 py-3"
 
               <div className="text-2xl">🏷</div>
 
