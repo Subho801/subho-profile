@@ -154,7 +154,7 @@ export default async function IntelPage() {
             <div className="absolute left-5 top-5 rounded-xl bg-black/50 p-2 backdrop-blur">
 
               <Image
-                src="/logos/intel.png"
+                src="/intel.png"
                 alt="Intel"
                 width={28}
                 height={28}
