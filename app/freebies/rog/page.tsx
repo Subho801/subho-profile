@@ -147,6 +147,37 @@ function timeAgo(date: string) {
   return `${Math.floor(diff / 86400)} day ago`;
 }
 
+const REGION_URLS: Record<string, string> = {
+  in: "https://rog.asus.com/in/elite/reward/all",
+  global: "https://rog.asus.com/elite/reward/all",
+  "ca-en": "https://rog.asus.com/ca-en/elite/reward/all",
+  cz: "https://rog.asus.com/cz/elite/reward/all",
+  ea: "https://rog.asus.com/ea/elite/reward/all",
+  "eg-en": "https://rog.asus.com/eg-en/elite/reward/all",
+  fr: "https://rog.asus.com/fr/elite/reward/all",
+  hu: "https://rog.asus.com/hu/elite/reward/all",
+  id: "https://rog.asus.com/id/elite/reward/all",
+  il: "https://rog.asus.com/il/elite/reward/all",
+  my: "https://rog.asus.com/my/elite/reward/all",
+  mx: "https://rog.asus.com/mx/elite/reward/all",
+  ph: "https://rog.asus.com/ph/elite/reward/all",
+  pl: "https://rog.asus.com/pl/elite/reward/all",
+  ro: "https://rog.asus.com/ro/elite/reward/all",
+  ru: "https://rog.asus.com/ru/elite/reward/all",
+  "sa-ar": "https://rog.asus.com/sa-ar/elite/reward/all",
+  "sa-en": "https://rog.asus.com/sa-en/elite/reward/all",
+  sg: "https://rog.asus.com/sg/elite/reward/all",
+  sk: "https://rog.asus.com/sk/elite/reward/all",
+  za: "https://rog.asus.com/za/elite/reward/all",
+  kr: "https://rog.asus.com/kr/elite/reward/all",
+  tr: "https://rog.asus.com/tr/elite/reward/all",
+  "ua-ua": "https://rog.asus.com/ua-ua/elite/reward/all",
+  uk: "https://rog.asus.com/uk/elite/reward/all",
+  us: "https://rog.asus.com/us/elite/reward/all",
+  wa: "https://rog.asus.com/wa/elite/reward/all",
+  "rs-en": "https://rog.asus.com/rs-en/elite/reward/all",
+};
+
 export default function RogRewardsPage() {
   const [data, setData] = useState<RogData | null>(null);
   const [loading, setLoading] = useState(true);
@@ -474,7 +505,10 @@ export default function RogRewardsPage() {
                       "border-zinc-700 bg-zinc-800 text-zinc-400",
                     icon: "❔",
                   };
-
+                const redeemUrl =
+  REGION_URLS[reward.region] ??
+  REGION_URLS.global;
+              
                 return (
 
                   <motion.article
@@ -568,7 +602,7 @@ export default function RogRewardsPage() {
                       </div>
 
                       <a
-  href="https://rog.asus.com/elite/reward/all"
+  href={redeemUrl}
   target="_blank"
   rel="noreferrer"
   className="mt-6 flex w-full items-center justify-center gap-2 rounded-2xl bg-red-500 py-3 text-sm font-black text-white transition hover:bg-red-400"
