@@ -34,8 +34,8 @@ export default async function IntelPage() {
 
         {/* Hero */}
 
-        <section className="mb-10 max-w-4xl rounded-[32px] border border-sky-400/10 bg-gradient-to-br from-sky-500/[0.10] via-white/[0.03] to-transparent p-6">
-
+        <section className="mb-8 max-w-5xl rounded-[32px] border border-sky-400/10 bg-gradient-to-br from-sky-500/[0.10] via-white/[0.03] to-transparent p-5">
+          
           <div className="mb-4 flex items-center gap-4">
 
             <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-sky-500/10 ring-1 ring-sky-400/20">
@@ -63,13 +63,13 @@ export default async function IntelPage() {
 
           </div>
 
-          <div className="mt-5 grid gap-3 sm:grid-cols-2">
+          <div className="mt-4 grid gap-3 sm:grid-cols-2">
 
-            <div className="rounded-2xl border border-white/10 bg-black/25 p-4">
+            className="rounded-2xl border border-white/10 bg-black/25 px-5 py-3"
 
               <div className="text-2xl">🎟</div>
 
-              <div className="mt-2 text-2xl font-bold">
+              <div className="mt-1 text-xl font-bold">
                 1
               </div>
 
@@ -83,7 +83,7 @@ export default async function IntelPage() {
 
               <div className="text-2xl">🏷</div>
 
-              <div className="mt-2 text-2xl font-bold">
+              <div className="mt-1 text-xl font-bold">
                 {intel.type}
               </div>
 
