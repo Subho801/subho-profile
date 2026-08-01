@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { AnimatePresence, motion } from "framer-motion";
 import { Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { ArrowUpRight } from "lucide-react";
@@ -392,7 +393,13 @@ export default function RogRewardsPage() {
                 </p>
 
                 <span className="ml-2 rounded-full border border-red-500/20 bg-red-500/10 px-2 py-0.5 text-[11px] text-zinc-400">
-                  {rewards.length} shown
+                  <motion.span
+  key={rewards.length}
+  initial={{ scale: 0.8, opacity: 0 }}
+  animate={{ scale: 1, opacity: 1 }}
+>
+  {rewards.length} shown
+</motion.span>
                 </span>
 
               </div>
@@ -423,7 +430,23 @@ export default function RogRewardsPage() {
 
             <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
 
-              {rewards.map((reward) => {
+              <AnimatePresence mode="popLayout">
+  {rewards.map((reward) => (
+    <motion.article
+      key={reward.id}
+      layout
+      initial={{ opacity: 0, y: 15 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -15 }}
+      transition={{
+        duration: 0.25,
+        ease: "easeOut",
+      }}
+      className="group overflow-hidden rounded-3xl ..."
+    >
+          </motion.article>
+  ))}
+</AnimatePresence>
 
                 const badge =
                   STATUS[
