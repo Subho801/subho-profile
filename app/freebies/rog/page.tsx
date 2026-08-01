@@ -53,22 +53,9 @@ function normalizeTitle(title: string) {
 
   // remove translations of "gift card"
   t = t.replace(
-    /\b(
-      karta|
-      kart|
-      karta|
-      karti|
-      darkova|
-      darcekova|
-      hediye|
-      podarunkowa|
-      bon|
-      regalo|
-      carte|
-      cadeaubon
-    )\b/gx,
-    ""
-  );
+  /(karta|kart|karti|darkova|darcekova|hediye|podarunkowa|bon|regalo|carte|cadeaubon)/g,
+  ""
+);
 
   // remove years
   t = t.replace(/\b20\d\d\b/g, "");
