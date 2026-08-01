@@ -87,33 +87,44 @@ const REGION_NAMES: Record<string, string> = {
 
 const REGION_FLAGS: Record<string, string> = {
   global: "🌍",
+
   in: "🇮🇳",
   us: "🇺🇸",
   uk: "🇬🇧",
   "ca-en": "🇨🇦",
+
   fr: "🇫🇷",
-  ru: "🇷🇺",
-  kr: "🇰🇷",
-  sg: "🇸🇬",
-  my: "🇲🇾",
-  ph: "🇵🇭",
-  id: "🇮🇩",
-  mx: "🇲🇽",
+  cz: "🇨🇿",
+  hu: "🇭🇺",
   pl: "🇵🇱",
   ro: "🇷🇴",
-  hu: "🇭🇺",
   sk: "🇸🇰",
-  cz: "🇨🇿",
-  il: "🇮🇱",
+
+  ru: "🇷🇺",
+  kr: "🇰🇷",
   tr: "🇹🇷",
-  "ua-ua": "🇺🇦",
+  il: "🇮🇱",
+
+  id: "🇮🇩",
+  my: "🇲🇾",
+  ph: "🇵🇭",
+  sg: "🇸🇬",
+
+  mx: "🇲🇽",
+
   za: "🇿🇦",
+
   "eg-en": "🇪🇬",
+
   "sa-ar": "🇸🇦",
   "sa-en": "🇦🇪",
+
+  "ua-ua": "🇺🇦",
+
   "rs-en": "🇷🇸",
-  wa: "🌍",
-  ea: "🌍",
+
+  wa: "🇬🇭", // West Africa (Ghana)
+  ea: "🇰🇪", // East Africa (Kenya)
 };
 
 export default function RogRewardsPage() {
