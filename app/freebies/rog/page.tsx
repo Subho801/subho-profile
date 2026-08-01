@@ -406,7 +406,7 @@ export default function RogRewardsPage() {
                 return (
 
                   <article
-                    key={`${reward.regions.length}-${reward.id}`}
+                    key={`${reward.title}-${reward.regions.length}`}
                     className="group overflow-hidden rounded-3xl border border-white/10 bg-[#121212] transition-all duration-300 hover:-translate-y-1 hover:border-red-500/40 hover:shadow-[0_0_35px_rgba(239,68,68,.12)]"
                   >
 
@@ -450,7 +450,7 @@ export default function RogRewardsPage() {
 
                       <div className="absolute right-4 top-4 rounded-full bg-black/70 px-3 py-1 text-xs font-bold backdrop-blur">
 
-                        🌍 {reward.regions.length} Regions ?? reward.region.toUpperCase()}
+                        🌍 {reward.regions.length} Region{reward.regions.length > 1 ? "s" : ""}
 
                       </div>
 
