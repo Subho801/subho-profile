@@ -34,7 +34,7 @@ export default async function IntelPage() {
 
         {/* Hero */}
 
-        <section className="mb-12 rounded-[32px] border border-sky-400/10 bg-gradient-to-br from-sky-500/[0.10] via-white/[0.03] to-transparent p-7">
+        <section className="mb-10 max-w-4xl rounded-[32px] border border-sky-400/10 bg-gradient-to-br from-sky-500/[0.10] via-white/[0.03] to-transparent p-6">
 
           <div className="mb-4 flex items-center gap-4">
 
@@ -55,7 +55,7 @@ export default async function IntelPage() {
                 Intel Gaming Access
               </p>
 
-              <h1 className="text-5xl font-bold">
+              <h1 className="text-4xl font-bold">
                 Intel Giveaways
               </h1>
 
@@ -63,7 +63,7 @@ export default async function IntelPage() {
 
           </div>
 
-          <div className="mt-6 grid gap-3 sm:grid-cols-2">
+          <div className="mt-5 grid gap-3 sm:grid-cols-2">
 
             <div className="rounded-2xl border border-white/10 bg-black/25 p-4">
 
