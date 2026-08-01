@@ -307,7 +307,7 @@ export default function RogRewardsPage() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search rewards..."
-            className="h-12 rounded-2xl border border-white/10 bg-[#121212] px-4 outline-none transition focus:border-red-500/40"
+            className="h-12 w-full rounded-2xl border border-white/10 bg-[#121212] px-4 outline-none transition focus:border-red-500/40"
           />
 
           <Select
