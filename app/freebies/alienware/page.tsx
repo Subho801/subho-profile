@@ -298,7 +298,7 @@ const totalKeys = giveaways.reduce(
 
     <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-wider text-zinc-500">
   <Image
-    src="/icons/arp.png"
+    src="/arp.png"
     alt="ARP"
     width={14}
     height={14}
