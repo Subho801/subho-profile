@@ -24,24 +24,6 @@ type AwaData = {
   items: Giveaway[];
 };
 
-function timeRemaining(timestamp: number) {
-  const diff = timestamp - Math.floor(Date.now() / 1000);
-
-  if (diff <= 0) return "Ended";
-
-  const days = Math.floor(diff / 86400);
-
-  if (days > 0) return `${days} day${days > 1 ? "s" : ""}`;
-
-  const hours = Math.floor((diff % 86400) / 3600);
-
-  if (hours > 0) return `${hours} hour${hours > 1 ? "s" : ""}`;
-
-  const mins = Math.floor((diff % 3600) / 60);
-
-  return `${mins} min`;
-}
-
 export default function OmenPage() {
   const [data, setData] = useState<AwaData | null>(null);
   const [loading, setLoading] = useState(true);
@@ -164,13 +146,12 @@ export default function OmenPage() {
             >
 
               <div className="text-2xl font-bold">
-                ⏰ {giveaways.length ? timeRemaining(giveaways[0].expire) : "-"}
-              </div>
+  ⭐ Featured
+</div>
 
-              <div className="text-sm text-zinc-500">
-                ⭐ Featured
-                  Live Feed
-              </div>
+<div className="text-sm text-zinc-500">
+  Live Feed
+</div>
 
             </motion.div>
 
@@ -189,13 +170,13 @@ export default function OmenPage() {
             </div>
 
             <h2 className="mt-4 text-2xl font-bold">
-              No Active Sweepstakes
+              No Active Giveaways
             </h2>
 
             <p className="mx-auto mt-3 max-w-lg text-zinc-500">
-              HP hasn't published any giveaway right now.
+              Alienware Arena doesn't have any featured giveaways right now.
               <br />
-              We'll automatically update this page as soon as a new sweepstakes goes live.
+              We'll automatically update this page as soon as new giveaways appear.
             </p>
 
           </div>
@@ -208,13 +189,12 @@ export default function OmenPage() {
 
               {giveaways.map((giveaway) => {
 
-                const active =
-                  giveaway.expire > Date.now() / 1000;
+               
 
                 return (
 
                   <motion.article
-                    key={giveaway.codename}
+                    key={giveaway.id}
                     layout="position"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -230,24 +210,13 @@ export default function OmenPage() {
 
                       <Image
                         src={giveaway.image}
-                        alt={giveaway.game}
+                        alt={giveaway.title}
                         fill
                         unoptimized
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                       />
 
-                      <div className="absolute left-4 top-4">
-
-                        <span
-                          className={`rounded-full border px-3 py-1 text-xs font-bold backdrop-blur ${
-                            active
-                              ? "border-green-500/30 bg-green-500/10 text-green-400"
-                              : "border-red-500/30 bg-red-500/10 text-red-400"
-                          }`}
-                        >
-                          {active ? "✅ Active" : "❌ Ended"}
-                        </span>
-
+                      
                       </div>
 
                     </div>
@@ -258,25 +227,45 @@ export default function OmenPage() {
 
                         <h2 className="line-clamp-2 text-xl font-bold text-white">
 
-                          {giveaway.game}
+                          {giveaway.title}
 
                         </h2>
 
                         <p className="mt-2 line-clamp-3 text-sm text-zinc-500">
 
-                          {giveaway.description}
+                          {giveaway.raw_title}
 
                         </p>
 
                       </div>
 
-                      <div className="mt-6 rounded-2xl border border-cyan-500/10 bg-cyan-500/[0.05] px-5 py-4">
+                      <div className="mt-6 grid grid-cols-2 gap-3">
 
-                        <div className="text-[10px] font-bold uppercase tracking-wider text-zinc-500">
+  <div className="rounded-2xl border border-cyan-500/10 bg-cyan-500/[0.05] p-4">
 
-                          Ends In
+    <div className="text-[10px] font-bold uppercase tracking-wider text-zinc-500">
+      ARP Required
+    </div>
 
-                        </div>
+    <div className="mt-2 text-3xl font-black text-cyan-400">
+      {giveaway.arp_required ?? "Free"}
+    </div>
+
+  </div>
+
+  <div className="rounded-2xl border border-cyan-500/10 bg-cyan-500/[0.05] p-4">
+
+    <div className="text-[10px] font-bold uppercase tracking-wider text-zinc-500">
+      Keys Left
+    </div>
+
+    <div className="mt-2 text-3xl font-black text-green-400">
+      {giveaway.keys_left ?? "∞"}
+    </div>
+
+  </div>
+
+</div>
 
                         <div className="mt-2 flex items-center gap-2 text-3xl font-black text-cyan-400">
 
@@ -299,13 +288,13 @@ export default function OmenPage() {
                       </div>
 
                       <a
-                        href={giveaway.button}
+                        href={giveaway.url}
                         target="_blank"
                         rel="noreferrer"
                         className="mt-6 flex w-full items-center justify-center gap-2 rounded-2xl bg-cyan-500 py-3 text-sm font-black text-black transition hover:bg-cyan-400"
                       >
 
-                        Enter Giveaway
+                        Open Giveaway
 
                         <ArrowUpRight className="h-4 w-4" />
 
