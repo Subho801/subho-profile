@@ -262,7 +262,7 @@ export default function OmenPage() {
                               : "border-red-500/30 bg-red-500/10 text-red-400"
                           }`}
                         >
-                          {active ? "🟢 Active" : "🔴 Ended"}
+                          {active ? "✅ Active" : "❌ Ended"}
                         </span>
 
                       </div>
