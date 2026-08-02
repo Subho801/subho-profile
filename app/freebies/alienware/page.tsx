@@ -269,7 +269,7 @@ export default function AlienwarePage() {
 
                         
 
-                      </div>
+                      
 
                       <a
                         href={giveaway.url}
