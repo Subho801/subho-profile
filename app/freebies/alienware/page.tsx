@@ -206,18 +206,31 @@ export default function AlienwarePage() {
                     className="group overflow-hidden rounded-3xl border border-white/10 bg-[#121212] transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/40 hover:shadow-[0_0_35px_rgba(6,182,212,.12)]"
                   >
 
-                    <div className="relative h-56 overflow-hidden">
+                   <div className="relative h-56 overflow-hidden">
 
-                      <Image
-                        src={giveaway.image}
-                        alt={giveaway.title}
-                        fill
-                        unoptimized
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
+  <Image
+    src={giveaway.image}
+    alt={giveaway.title}
+    fill
+    unoptimized
+    className="object-cover transition-transform duration-500 group-hover:scale-105"
+  />
 
-                      
-                      </div>
+  <div className="absolute left-4 top-4">
+    <span
+      className={`rounded-full border px-3 py-1 text-xs font-bold backdrop-blur ${
+        giveaway.keys_left === null || giveaway.keys_left <= 0
+          ? "border-red-500/30 bg-red-500/10 text-red-400"
+          : "border-green-500/30 bg-green-500/10 text-green-400"
+      }`}
+    >
+      {giveaway.keys_left === null || giveaway.keys_left <= 0
+        ? "🔴 OUT OF KEYS"
+        : "🟢 LIVE"}
+    </span>
+  </div>
+
+</div>
 
                   
 
