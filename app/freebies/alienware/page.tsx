@@ -296,9 +296,15 @@ const totalKeys = giveaways.reduce(
 
   <div className="rounded-2xl border border-cyan-500/10 bg-cyan-500/[0.05] p-4">
 
-    <div className="text-[10px] font-bold uppercase tracking-wider text-zinc-500">
-      ARP Required
-    </div>
+    <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-wider text-zinc-500">
+  <Image
+    src="/icons/arp.png"
+    alt="ARP"
+    width={14}
+    height={14}
+  />
+  <span>ARP Required</span>
+</div>
 
     <div className="mt-2 text-3xl font-black text-cyan-400">
       {giveaway.arp_required ?? "Free"}
