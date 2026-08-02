@@ -37,7 +37,7 @@ export default async function FreebiesPage() {
       items: [
         { name: "Medal TV", desc: "Quest rewards", icon: "🎖️", href: "/freebies/medal" },
         { name: "AMD Rewards", desc: "Promo keys", icon: "🔥", href: "/freebies/amd" },
-        { name: "Alienware Arena", desc: "Gaming keys", icon: "👽", href: "#" },
+        { name: "Alienware Arena", desc: "Gaming keys", icon: "👽", href: "/freebies/alienware" },
         { name: "ROG Elite", desc: "Regional rewards", icon: "⚡", href: "/freebies/rog" },
         { name: "HP OMEN", desc: "Reward drops", icon: "💎", href: "/freebies/omen" },
         {
