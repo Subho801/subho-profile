@@ -229,6 +229,13 @@ export default function AlienwarePage() {
         : "🟢 LIVE"}
     </span>
   </div>
+      <div className="absolute right-4 top-4">
+  {giveaway.raw_title?.toLowerCase().includes("steam") && (
+    <div className="rounded-full border border-[#1b4d72] bg-[#171a21]/90 px-3 py-1 text-xs font-bold text-white backdrop-blur">
+      STEAM
+    </div>
+  )}
+</div>
 
 </div>
 
