@@ -206,11 +206,13 @@ export default function OmenPage() {
             </div>
 
             <h2 className="mt-4 text-2xl font-bold">
-              No giveaways found
+              No Active Sweepstakes
             </h2>
 
-            <p className="mt-2 text-zinc-500">
-              Try another search term.
+            <p className="mx-auto mt-3 max-w-lg text-zinc-500">
+              HP hasn't published any giveaway right now.
+              <br />
+              We'll automatically update this page as soon as a new sweepstakes goes live.
             </p>
 
           </div>
