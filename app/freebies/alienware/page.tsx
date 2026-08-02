@@ -272,7 +272,7 @@ const totalKeys = giveaways.reduce(
 
                     <div className="flex flex-col p-5">
 
-                      <div className="min-h-[72px]">
+                      <div className="min-h-[84px]">
 
                         <h2 className="line-clamp-2 text-xl font-bold text-white">
 
@@ -308,7 +308,7 @@ const totalKeys = giveaways.reduce(
 </div>
 
     <div className="mt-2 text-3xl font-black text-cyan-400">
-      {giveaway.arp_required ?? "Free"}
+      {giveaway.arp_required ?? 0}
     </div>
 
   </div>
