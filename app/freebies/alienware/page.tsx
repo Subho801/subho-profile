@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { KeyRound } from "lucide-react";
 
 
 type Giveaway = {
@@ -314,9 +315,10 @@ const totalKeys = giveaways.reduce(
 
   <div className="rounded-2xl border border-cyan-500/10 bg-cyan-500/[0.05] p-4">
 
-    <div className="text-[10px] font-bold uppercase tracking-wider text-zinc-500">
-      Keys Left
-    </div>
+    <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-wider text-zinc-500">
+  <KeyRound className="h-3.5 w-3.5 text-yellow-400" />
+  <span>Keys Left</span>
+</div>
 
     <div
   className={`mt-2 text-3xl font-black ${
