@@ -41,9 +41,30 @@ export default function AlienwarePage() {
   }, []);
 
   const giveaways = useMemo(() => {
-    if (!data) return [];
-    return data.items;
-  }, [data]);
+  if (!data) return [];
+
+  return [...data.items].sort((a, b) => {
+    const score = (g: Giveaway) => {
+      let s = 0;
+
+      // Live giveaways first
+      if (g.keys_left !== null && g.keys_left > 0) s += 100;
+
+      // Steam games first
+      if (g.raw_title?.toLowerCase().includes("steam")) s += 50;
+
+      // Game key giveaways
+      if (g.raw_title?.toLowerCase().includes("key giveaway")) s += 20;
+
+      // More keys = higher
+      s += g.keys_left ?? 0;
+
+      return s;
+    };
+
+    return score(b) - score(a);
+  });
+}, [data]);
 
   if (loading) {
     return (
