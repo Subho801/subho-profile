@@ -156,7 +156,7 @@ export default function OmenPage() {
               </div>
 
               <div className="text-sm text-zinc-500">
-                Total Giveaways
+                Current Giveaway{data.count !== 1 ? "s" : ""}
               </div>
 
             </motion.div>
@@ -167,11 +167,11 @@ export default function OmenPage() {
             >
 
               <div className="text-2xl font-bold text-green-400">
-                🟢 {giveaways.filter(g => g.expire > Date.now() / 1000).length}
+                 🟢 Live
               </div>
 
               <div className="text-sm text-zinc-500">
-                Active
+                Status
               </div>
 
             </motion.div>
@@ -182,11 +182,11 @@ export default function OmenPage() {
             >
 
               <div className="text-2xl font-bold">
-                ⏰ Soon
+                ⏰ {giveaways.length ? timeRemaining(giveaways[0].expire) : "-"}
               </div>
 
               <div className="text-sm text-zinc-500">
-                Ending Countdown
+                Ends In
               </div>
 
             </motion.div>
