@@ -231,11 +231,16 @@ export default function AlienwarePage() {
 
                         </h2>
 
-                        <p className="mt-2 line-clamp-2 text-sm text-zinc-500">
-
-                          {giveaway.raw_title}
-
-                        </p>
+                        <div className="mt-2 text-sm text-zinc-500">
+  <span className="font-semibold text-zinc-400">
+    Published:
+  </span>{" "}
+  {new Date(giveaway.publishedAt).toLocaleDateString("en-GB", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+  })}
+</div>
 
                       </div>
 
