@@ -24,7 +24,7 @@ type AwaData = {
   items: Giveaway[];
 };
 
-export default function OmenPage() {
+export default function AlienwarePage() {
   const [data, setData] = useState<AwaData | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -219,7 +219,7 @@ export default function OmenPage() {
                       
                       </div>
 
-                    </div>
+                  
 
                     <div className="flex flex-col p-5">
 
@@ -231,7 +231,7 @@ export default function OmenPage() {
 
                         </h2>
 
-                        <p className="mt-2 line-clamp-3 text-sm text-zinc-500">
+                        <p className="mt-2 line-clamp-2 text-sm text-zinc-500">
 
                           {giveaway.raw_title}
 
@@ -267,23 +267,7 @@ export default function OmenPage() {
 
 </div>
 
-                        <div className="mt-2 flex items-center gap-2 text-3xl font-black text-cyan-400">
-
-                          <span>⏰</span>
-
-                          <span>
-                            {timeRemaining(giveaway.expire)}
-                          </span>
-
-                        </div>
-
-                        <div className="mt-2 text-sm text-zinc-500">
-
-                          {new Date(
-                            giveaway.expire * 1000
-                          ).toLocaleString()}
-
-                        </div>
+                        
 
                       </div>
 
