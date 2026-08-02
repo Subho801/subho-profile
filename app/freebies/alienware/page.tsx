@@ -277,9 +277,19 @@ export default function AlienwarePage() {
       Keys Left
     </div>
 
-    <div className="mt-2 text-3xl font-black text-green-400">
-      {giveaway.keys_left ?? "∞"}
-    </div>
+    <div
+  className={`mt-2 text-3xl font-black ${
+    giveaway.keys_left === null || giveaway.keys_left <= 0
+      ? "text-zinc-500"
+      : giveaway.keys_left >= 3000
+      ? "text-green-400"
+      : giveaway.keys_left >= 1000
+      ? "text-yellow-400"
+      : "text-red-400"
+  }`}
+>
+  {giveaway.keys_left ?? 0}
+</div>
 
   </div>
 
