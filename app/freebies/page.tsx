@@ -39,7 +39,7 @@ export default async function FreebiesPage() {
         { name: "AMD Rewards", desc: "Promo keys", icon: "🔥", href: "/freebies/amd" },
         { name: "Alienware Arena", desc: "Gaming keys", icon: "👽", href: "#" },
         { name: "ROG Elite", desc: "Regional rewards", icon: "⚡", href: "/freebies/rog" },
-        { name: "HP OMEN", desc: "Reward drops", icon: "💎", href: "#" },
+        { name: "HP OMEN", desc: "Reward drops", icon: "💎", href: "/freebies/omen" },
         {
           name: intel?.source ?? "Intel Gaming Access",
           desc: intel?.title ?? "Intel promos",
