@@ -4,9 +4,8 @@ import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
-import { Input } from "@/components/ui/input";
 
 type Giveaway = {
   codename: string;
@@ -55,7 +54,6 @@ function timeRemaining(timestamp: number) {
 export default function OmenPage() {
   const [data, setData] = useState<OmenData | null>(null);
   const [loading, setLoading] = useState(true);
-  const [search, setSearch] = useState("");
 
   useEffect(() => {
     fetch("/api/omen")
@@ -71,11 +69,8 @@ export default function OmenPage() {
 
   const giveaways = useMemo(() => {
     if (!data) return [];
-
-    return data.items.filter((g) =>
-      g.game.toLowerCase().includes(search.toLowerCase())
-    );
-  }, [data, search]);
+    return data.items;
+  }, [data]);
 
   if (loading) {
     return (
@@ -199,25 +194,6 @@ export default function OmenPage() {
           </div>
 
         </section>
-
-        {/* Search */}
-
-        <div className="mb-10">
-
-          <div className="relative max-w-lg">
-
-            <Search className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-500" />
-
-            <Input
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              placeholder="Search giveaways..."
-              className="h-12 rounded-2xl border-white/10 bg-[#121212] pl-10 focus-visible:ring-cyan-500/30"
-            />
-
-          </div>
-
-        </div>
 
                 {/* Giveaways */}
 
