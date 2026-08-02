@@ -65,7 +65,14 @@ export default function AlienwarePage() {
     return score(b) - score(a);
   });
 }, [data]);
+const liveCount = giveaways.filter(
+  (g) => g.keys_left !== null && g.keys_left > 0
+).length;
 
+const totalKeys = giveaways.reduce(
+  (sum, g) => sum + (g.keys_left ?? 0),
+  0
+);
   if (loading) {
     return (
       <main className="flex min-h-screen items-center justify-center bg-background text-zinc-400">
@@ -152,12 +159,12 @@ export default function AlienwarePage() {
             >
 
               <div className="text-2xl font-bold text-green-400">
-                 🔑 Key Giveaways
-              </div>
+  🟢 {liveCount}
+</div>
 
-              <div className="text-sm text-zinc-500">
-                Alienware Arena
-              </div>
+<div className="text-sm text-zinc-500">
+  Live Giveaways
+</div>
 
             </motion.div>
 
@@ -166,12 +173,12 @@ export default function AlienwarePage() {
               className="rounded-2xl border border-white/10 bg-black/25 p-4"
             >
 
-              <div className="text-2xl font-bold">
-  ⭐ Featured
+              <div className="text-2xl font-bold text-cyan-400">
+  🔑 {totalKeys.toLocaleString()}
 </div>
 
 <div className="text-sm text-zinc-500">
-  Live Feed
+  Keys Remaining
 </div>
 
             </motion.div>
