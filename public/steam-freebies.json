@@ -1,35 +1,4 @@
 {
-  "items": [
-    {
-      "id": "018d937f-037b-72ec-bb12-226c3ec8334b",
-      "slug": "moonlighter",
-      "title": "Moonlighter",
-      "url": "https://itad.link/019fd322-e0f3-72e3-a23e-d61baebd024a/",
-      "itadUrl": "https://isthereanydeal.com/game/moonlighter/",
-      "image": "https://assets.isthereanydeal.com/018d937f-037b-72ec-bb12-226c3ec8334b/banner600.jpg?t=1785953711",
-      "discount": 100,
-      "price": "Free",
-      "regularPrice": 19.99,
-      "currency": "USD",
-      "expiry": "2026-08-09T19:00:00+02:00",
-      "timestamp": "2026-08-05T20:15:19+02:00",
-      "foundAt": "2026-08-09T17:05:18.696663+00:00"
-    },
-    {
-      "id": "018d937f-2102-72e8-947d-71a97f46e99e",
-      "slug": "breathedge",
-      "title": "Breathedge",
-      "url": "https://itad.link/019fdd38-b41b-70be-80d5-23af8574f842/",
-      "itadUrl": "https://isthereanydeal.com/game/breathedge/",
-      "image": "https://assets.isthereanydeal.com/018d937f-2102-72e8-947d-71a97f46e99e/banner600.jpg?t=1786138266",
-      "discount": 100,
-      "price": "Free",
-      "regularPrice": 24.99,
-      "currency": "USD",
-      "expiry": "2026-08-09T19:00:00+02:00",
-      "timestamp": "2026-08-07T19:16:44+02:00",
-      "foundAt": "2026-08-09T17:05:18.696687+00:00"
-    }
-  ],
-  "updatedAt": "2026-08-09T17:05:18.697330+00:00"
+  "items": [],
+  "updatedAt": "2026-08-09T17:56:45.456617+00:00"
 }
