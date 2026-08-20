@@ -1,20 +1,4 @@
 {
-  "items": [
-    {
-      "id": "018d937f-03d3-7232-90a1-d6ae64153f13",
-      "slug": "deponia",
-      "title": "Deponia",
-      "url": "https://itad.link/019ffc20-6b52-71ac-9e67-971af5fe4617/",
-      "itadUrl": "https://isthereanydeal.com/game/deponia/",
-      "image": "https://assets.isthereanydeal.com/018d937f-03d3-7232-90a1-d6ae64153f13/banner600.jpg?t=1786647659",
-      "discount": 100,
-      "price": "Free",
-      "regularPrice": 9.99,
-      "currency": "USD",
-      "expiry": "2026-08-20T19:00:00+02:00",
-      "timestamp": "2026-08-13T19:16:51+02:00",
-      "foundAt": "2026-08-20T16:34:52.810709+00:00"
-    }
-  ],
-  "updatedAt": "2026-08-20T16:34:52.811430+00:00"
+  "items": [],
+  "updatedAt": "2026-08-20T17:22:48.034136+00:00"
 }
