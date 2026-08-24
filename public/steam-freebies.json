@@ -1,4 +1,20 @@
 {
-  "items": [],
-  "updatedAt": "2026-08-24T17:05:40.820696+00:00"
+  "items": [
+    {
+      "id": "019329e6-ea8a-732d-8399-54688a4a4edb",
+      "slug": "dokimon-quest",
+      "title": "Dokimon: Quest",
+      "url": "https://itad.link/01a034d3-aba1-7085-a9b2-af1b4db21148/",
+      "itadUrl": "https://isthereanydeal.com/game/dokimon-quest/",
+      "image": "https://assets.isthereanydeal.com/019329e6-ea8a-732d-8399-54688a4a4edb/banner600.jpg?t=1787590811",
+      "discount": 100,
+      "price": "Free",
+      "regularPrice": 14.99,
+      "currency": "USD",
+      "expiry": "2026-08-26T19:00:00+02:00",
+      "timestamp": "2026-08-24T19:34:03+02:00",
+      "foundAt": "2026-08-24T17:56:21.970372+00:00"
+    }
+  ],
+  "updatedAt": "2026-08-24T17:56:21.971150+00:00"
 }
