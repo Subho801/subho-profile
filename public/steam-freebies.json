@@ -13,7 +13,7 @@
       "currency": "USD",
       "expiry": "2026-08-26T19:00:00+02:00",
       "timestamp": "2026-08-24T19:34:03+02:00",
-      "foundAt": "2026-08-25T02:16:33.977967+00:00"
+      "foundAt": "2026-08-25T03:25:07.352584+00:00"
     },
     {
       "id": "01a034ee-6ccb-7272-9ce3-37de03bf7c45",
@@ -21,15 +21,15 @@
       "title": "Microsoft Flight Simulator Suite: Themes Reimagined",
       "url": "https://itad.link/01a034ee-6ccc-70e3-8157-d1450799f024/",
       "itadUrl": "https://isthereanydeal.com/game/microsoft-flight-simulator-suite-themes-reimagined/",
-      "image": "",
+      "image": "https://assets.isthereanydeal.com/01a034ee-6ccb-7272-9ce3-37de03bf7c45/banner400.jpg?t=1787626227",
       "discount": 100,
       "price": "Free",
       "regularPrice": 9.99,
       "currency": "USD",
       "expiry": "2026-09-01T19:00:00+02:00",
       "timestamp": "2026-08-24T20:00:35+02:00",
-      "foundAt": "2026-08-25T02:16:33.977992+00:00"
+      "foundAt": "2026-08-25T03:25:07.352612+00:00"
     }
   ],
-  "updatedAt": "2026-08-25T02:16:33.978675+00:00"
+  "updatedAt": "2026-08-25T03:25:07.353367+00:00"
 }
