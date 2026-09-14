@@ -1,4 +1,20 @@
 {
-  "items": [],
-  "updatedAt": "2026-09-14T05:13:53.038462+00:00"
+  "items": [
+    {
+      "id": "018d937f-1f1c-70bf-ab85-c3027c01aa77",
+      "slug": "crystal-crisis",
+      "title": "Crystal Crisis",
+      "url": "https://itad.link/01a09ec5-0b15-7343-84d0-0a2160f54022/?app=oa1g8c",
+      "itadUrl": "https://isthereanydeal.com/game/crystal-crisis/",
+      "image": "https://assets.isthereanydeal.com/018d937f-1f1c-70bf-ab85-c3027c01aa77/banner600.jpg?t=1789339213",
+      "discount": 100,
+      "price": "Free",
+      "regularPrice": 19.99,
+      "currency": "USD",
+      "expiry": "2026-09-22T08:59:00+02:00",
+      "timestamp": "2026-09-14T09:15:27+02:00",
+      "foundAt": "2026-09-14T10:51:03.113312+00:00"
+    }
+  ],
+  "updatedAt": "2026-09-14T10:51:03.114213+00:00"
 }
