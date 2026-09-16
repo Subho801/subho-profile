@@ -13,8 +13,23 @@
       "currency": "USD",
       "expiry": "2026-09-22T08:59:00+02:00",
       "timestamp": "2026-09-14T09:15:27+02:00",
-      "foundAt": "2026-09-16T12:41:22.241394+00:00"
+      "foundAt": "2026-09-16T17:25:18.446830+00:00"
+    },
+    {
+      "id": "018d937f-64ac-7047-aed9-f1a7e558640c",
+      "slug": "space-menace",
+      "title": "Space Menace",
+      "url": "https://itad.link/01a0ab29-7763-726f-a5a2-1a258fab2ad8/?app=oa1g8c",
+      "itadUrl": "https://isthereanydeal.com/game/space-menace/",
+      "image": "https://assets.isthereanydeal.com/018d937f-64ac-7047-aed9-f1a7e558640c/banner600.jpg?t=1789578326",
+      "discount": 100,
+      "price": "Free",
+      "regularPrice": 6.99,
+      "currency": "USD",
+      "expiry": "2026-09-23T19:00:00+02:00",
+      "timestamp": "2026-09-16T19:00:32+02:00",
+      "foundAt": "2026-09-16T17:25:18.446858+00:00"
     }
   ],
-  "updatedAt": "2026-09-16T12:41:22.242197+00:00"
+  "updatedAt": "2026-09-16T17:25:18.447676+00:00"
 }
