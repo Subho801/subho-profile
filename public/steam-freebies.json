@@ -13,7 +13,7 @@
       "currency": "USD",
       "expiry": "2026-09-22T08:59:00+02:00",
       "timestamp": "2026-09-14T09:15:27+02:00",
-      "foundAt": "2026-09-17T12:40:13.378992+00:00"
+      "foundAt": "2026-09-17T17:24:49.598028+00:00"
     },
     {
       "id": "018d937f-64ac-7047-aed9-f1a7e558640c",
@@ -28,8 +28,23 @@
       "currency": "USD",
       "expiry": "2026-09-23T19:00:00+02:00",
       "timestamp": "2026-09-16T19:00:32+02:00",
-      "foundAt": "2026-09-17T12:40:13.379018+00:00"
+      "foundAt": "2026-09-17T17:24:49.598051+00:00"
+    },
+    {
+      "id": "019d2b40-a974-7066-a56f-b45160d39566",
+      "slug": "dying-light-the-beast-discharge-weapon-pack",
+      "title": "Dying Light: The Beast - Discharge Weapon Pack",
+      "url": "https://itad.link/01a0afb8-d2a4-72ed-b4ee-9a6d15ebf0bf/?app=oa1g8c",
+      "itadUrl": "https://isthereanydeal.com/game/dying-light-the-beast-discharge-weapon-pack/",
+      "image": "https://assets.isthereanydeal.com/019d2b40-a974-7066-a56f-b45160d39566/banner600.jpg?t=1789426551",
+      "discount": 100,
+      "price": "Free",
+      "regularPrice": 4.99,
+      "currency": "USD",
+      "expiry": "2026-09-24T16:00:00+02:00",
+      "timestamp": "2026-09-17T16:18:16+02:00",
+      "foundAt": "2026-09-17T17:24:49.598056+00:00"
     }
   ],
-  "updatedAt": "2026-09-17T12:40:13.379741+00:00"
+  "updatedAt": "2026-09-17T17:24:49.598742+00:00"
 }
