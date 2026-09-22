@@ -1,21 +1,6 @@
 {
   "items": [
     {
-      "id": "018d937f-1f1c-70bf-ab85-c3027c01aa77",
-      "slug": "crystal-crisis",
-      "title": "Crystal Crisis",
-      "url": "https://itad.link/01a09ec5-0b15-7343-84d0-0a2160f54022/?app=oa1g8c",
-      "itadUrl": "https://isthereanydeal.com/game/crystal-crisis/",
-      "image": "https://assets.isthereanydeal.com/018d937f-1f1c-70bf-ab85-c3027c01aa77/banner600.jpg?t=1789339213",
-      "discount": 100,
-      "price": "Free",
-      "regularPrice": 19.99,
-      "currency": "USD",
-      "expiry": "2026-09-22T08:59:00+02:00",
-      "timestamp": "2026-09-14T09:15:27+02:00",
-      "foundAt": "2026-09-22T02:52:55.072585+00:00"
-    },
-    {
       "id": "018d937f-64ac-7047-aed9-f1a7e558640c",
       "slug": "space-menace",
       "title": "Space Menace",
@@ -28,7 +13,7 @@
       "currency": "USD",
       "expiry": "2026-09-23T19:00:00+02:00",
       "timestamp": "2026-09-16T19:00:32+02:00",
-      "foundAt": "2026-09-22T02:52:55.072609+00:00"
+      "foundAt": "2026-09-22T08:09:54.094433+00:00"
     },
     {
       "id": "019d2b40-a974-7066-a56f-b45160d39566",
@@ -43,7 +28,7 @@
       "currency": "USD",
       "expiry": "2026-09-24T16:00:00+02:00",
       "timestamp": "2026-09-17T16:18:16+02:00",
-      "foundAt": "2026-09-22T02:52:55.072613+00:00"
+      "foundAt": "2026-09-22T08:09:54.094457+00:00"
     },
     {
       "id": "018d937f-739f-7373-8f81-7ddc26dc843b",
@@ -58,8 +43,8 @@
       "currency": "USD",
       "expiry": "2026-09-23T19:00:00+02:00",
       "timestamp": "2026-09-18T19:00:39+02:00",
-      "foundAt": "2026-09-22T02:52:55.072616+00:00"
+      "foundAt": "2026-09-22T08:09:54.094463+00:00"
     }
   ],
-  "updatedAt": "2026-09-22T02:52:55.073283+00:00"
+  "updatedAt": "2026-09-22T08:09:54.095261+00:00"
 }
