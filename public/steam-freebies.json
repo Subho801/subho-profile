@@ -1,21 +1,6 @@
 {
   "items": [
     {
-      "id": "018d937f-64ac-7047-aed9-f1a7e558640c",
-      "slug": "space-menace",
-      "title": "Space Menace",
-      "url": "https://itad.link/01a0ab29-7763-726f-a5a2-1a258fab2ad8/?app=oa1g8c",
-      "itadUrl": "https://isthereanydeal.com/game/space-menace/",
-      "image": "https://assets.isthereanydeal.com/018d937f-64ac-7047-aed9-f1a7e558640c/banner600.jpg?t=1789578326",
-      "discount": 100,
-      "price": "Free",
-      "regularPrice": 6.99,
-      "currency": "USD",
-      "expiry": "2026-09-23T19:00:00+02:00",
-      "timestamp": "2026-09-16T19:00:32+02:00",
-      "foundAt": "2026-09-23T12:51:26.215197+00:00"
-    },
-    {
       "id": "019d2b40-a974-7066-a56f-b45160d39566",
       "slug": "dying-light-the-beast-discharge-weapon-pack",
       "title": "Dying Light: The Beast - Discharge Weapon Pack",
@@ -28,23 +13,8 @@
       "currency": "USD",
       "expiry": "2026-09-24T16:00:00+02:00",
       "timestamp": "2026-09-17T16:18:16+02:00",
-      "foundAt": "2026-09-23T12:51:26.215224+00:00"
-    },
-    {
-      "id": "018d937f-739f-7373-8f81-7ddc26dc843b",
-      "slug": "deadshot",
-      "title": "Deadshot",
-      "url": "https://itad.link/01a0b576-3751-7003-b13c-88a1550d303e/?app=oa1g8c",
-      "itadUrl": "https://isthereanydeal.com/game/deadshot/",
-      "image": "https://assets.isthereanydeal.com/018d937f-739f-7373-8f81-7ddc26dc843b/banner600.jpg?t=1789781112",
-      "discount": 100,
-      "price": "Free",
-      "regularPrice": 4.99,
-      "currency": "USD",
-      "expiry": "2026-09-23T19:00:00+02:00",
-      "timestamp": "2026-09-18T19:00:39+02:00",
-      "foundAt": "2026-09-23T12:51:26.215228+00:00"
+      "foundAt": "2026-09-23T17:40:28.728124+00:00"
     }
   ],
-  "updatedAt": "2026-09-23T12:51:26.215796+00:00"
+  "updatedAt": "2026-09-23T17:40:28.728792+00:00"
 }
