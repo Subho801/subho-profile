@@ -1,4 +1,20 @@
 {
-  "items": [],
-  "updatedAt": "2026-10-01T06:17:00.306285+00:00"
+  "items": [
+    {
+      "id": "01a0f688-5e29-7086-bede-8aceef6e6d3f",
+      "slug": "mxgp-26-scrubdesignz-liveries",
+      "title": "MXGP 26 - Scrubdesignz Liveries",
+      "url": "https://itad.link/01a0f688-5e2a-708f-aae1-77c37d5337de/?app=oa1g8c",
+      "itadUrl": "https://isthereanydeal.com/game/mxgp-26-scrubdesignz-liveries/",
+      "image": "https://assets.isthereanydeal.com/01a0f688-5e29-7086-bede-8aceef6e6d3f/banner600.jpg?t=1790845517",
+      "discount": 100,
+      "price": "Free",
+      "regularPrice": 1.99,
+      "currency": "USD",
+      "expiry": "2026-10-15T19:00:00+02:00",
+      "timestamp": "2026-10-01T10:15:43+02:00",
+      "foundAt": "2026-10-01T13:40:07.639773+00:00"
+    }
+  ],
+  "updatedAt": "2026-10-01T13:40:07.640509+00:00"
 }
