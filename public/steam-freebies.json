@@ -13,23 +13,23 @@
       "currency": "USD",
       "expiry": "2026-10-15T19:00:00+02:00",
       "timestamp": "2026-10-01T10:15:43+02:00",
-      "foundAt": "2026-10-07T17:37:46.309776+00:00"
+      "foundAt": "2026-10-07T22:32:03.932760+00:00"
     },
     {
-      "id": "01a0f885-4d11-7054-b0e9-729bb2aaeac3",
-      "slug": "rotwood-dlc-1",
-      "title": "Rotwood - DLC 1",
+      "id": "01a0f885-4d0e-70e9-bb60-6b1f0ed02128",
+      "slug": "rotwood-drakin-armoury-pack",
+      "title": "Rotwood: Drakin Armoury Pack",
       "url": "https://itad.link/01a0f885-4d10-7380-98a6-eac9e77f470a/?app=oa1g8c",
-      "itadUrl": "https://isthereanydeal.com/game/rotwood-dlc-1/",
-      "image": "https://assets.isthereanydeal.com/01a0f885-4d11-7054-b0e9-729bb2aaeac3/banner600.jpg?t=1791141614",
+      "itadUrl": "https://isthereanydeal.com/game/rotwood-drakin-armoury-pack/",
+      "image": "https://assets.isthereanydeal.com/01a0f885-4d0e-70e9-bb60-6b1f0ed02128/banner600.jpg?t=1790963734",
       "discount": 100,
       "price": "Free",
       "regularPrice": 4.99,
       "currency": "USD",
       "expiry": "2026-10-15T19:00:00+02:00",
       "timestamp": "2026-10-01T19:31:40+02:00",
-      "foundAt": "2026-10-07T17:37:46.309801+00:00"
+      "foundAt": "2026-10-07T22:32:03.932787+00:00"
     }
   ],
-  "updatedAt": "2026-10-07T17:37:46.310594+00:00"
+  "updatedAt": "2026-10-07T22:32:03.933553+00:00"
 }
