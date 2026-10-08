@@ -13,7 +13,7 @@
       "currency": "USD",
       "expiry": "2026-10-15T19:00:00+02:00",
       "timestamp": "2026-10-01T10:15:43+02:00",
-      "foundAt": "2026-10-08T16:43:02.547841+00:00"
+      "foundAt": "2026-10-08T21:43:43.558682+00:00"
     },
     {
       "id": "01a0f885-4d0e-70e9-bb60-6b1f0ed02128",
@@ -28,7 +28,7 @@
       "currency": "USD",
       "expiry": "2026-10-15T19:00:00+02:00",
       "timestamp": "2026-10-01T19:31:40+02:00",
-      "foundAt": "2026-10-08T16:43:02.547864+00:00"
+      "foundAt": "2026-10-08T21:43:43.558706+00:00"
     },
     {
       "id": "01a11a94-cab6-70a2-95b3-562be5d313e0",
@@ -36,15 +36,45 @@
       "title": "Gear.Club Unlimited 3 - Gear.Club Signature Pack",
       "url": "https://itad.link/01a11a94-cab8-717d-86e8-b90a455df21b/?app=oa1g8c",
       "itadUrl": "https://isthereanydeal.com/game/gear-club-unlimited-3-gear-club-signature-pack/",
-      "image": "https://assets.isthereanydeal.com/01a11a94-cab6-70a2-95b3-562be5d313e0/banner600.jpg?t=1791454518",
+      "image": "",
       "discount": 100,
       "price": "Free",
       "regularPrice": 4.99,
       "currency": "USD",
       "expiry": "2026-10-22T19:00:00+02:00",
       "timestamp": "2026-10-08T10:15:25+02:00",
-      "foundAt": "2026-10-08T16:43:02.547870+00:00"
+      "foundAt": "2026-10-08T21:43:43.558713+00:00"
+    },
+    {
+      "id": "018d937f-6961-71a8-9e75-32395754dc80",
+      "slug": "world-of-warships-ning-hai",
+      "title": "World of Warships — Ning Hai",
+      "url": "https://itad.link/01a11c67-b661-7292-b8db-e2e7357d7300/?app=oa1g8c",
+      "itadUrl": "https://isthereanydeal.com/game/world-of-warships-ning-hai/",
+      "image": "https://assets.isthereanydeal.com/018d937f-6961-71a8-9e75-32395754dc80/banner600.jpg?t=1791480313",
+      "discount": 100,
+      "price": "Free",
+      "regularPrice": 11.2,
+      "currency": "USD",
+      "expiry": "2026-10-13T03:00:00+02:00",
+      "timestamp": "2026-10-08T18:45:24+02:00",
+      "foundAt": "2026-10-08T21:43:43.558727+00:00"
+    },
+    {
+      "id": "018d937f-2072-73fb-bb97-ac720e17b5e0",
+      "slug": "pony-island",
+      "title": "Pony Island",
+      "url": "https://itad.link/01a11d0e-2b7f-70ef-b6aa-5eedc4836e25/?app=oa1g8c",
+      "itadUrl": "https://isthereanydeal.com/game/pony-island/",
+      "image": "https://assets.isthereanydeal.com/018d937f-2072-73fb-bb97-ac720e17b5e0/banner600.jpg?t=1791480040",
+      "discount": 100,
+      "price": "Free",
+      "regularPrice": 4.99,
+      "currency": "USD",
+      "expiry": "2026-10-12T19:00:00+02:00",
+      "timestamp": "2026-10-08T22:05:22+02:00",
+      "foundAt": "2026-10-08T21:43:43.558732+00:00"
     }
   ],
-  "updatedAt": "2026-10-08T16:43:02.548584+00:00"
+  "updatedAt": "2026-10-08T21:43:43.559518+00:00"
 }
