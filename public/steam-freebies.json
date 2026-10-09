@@ -13,7 +13,7 @@
       "currency": "USD",
       "expiry": "2026-10-15T19:00:00+02:00",
       "timestamp": "2026-10-01T10:15:43+02:00",
-      "foundAt": "2026-10-09T01:38:57.371790+00:00"
+      "foundAt": "2026-10-09T08:19:50.240780+00:00"
     },
     {
       "id": "01a0f885-4d0e-70e9-bb60-6b1f0ed02128",
@@ -28,7 +28,7 @@
       "currency": "USD",
       "expiry": "2026-10-15T19:00:00+02:00",
       "timestamp": "2026-10-01T19:31:40+02:00",
-      "foundAt": "2026-10-09T01:38:57.371813+00:00"
+      "foundAt": "2026-10-09T08:19:50.240802+00:00"
     },
     {
       "id": "01a11a94-cab6-70a2-95b3-562be5d313e0",
@@ -36,14 +36,14 @@
       "title": "Gear.Club Unlimited 3 - Gear.Club Signature Pack",
       "url": "https://itad.link/01a11a94-cab8-717d-86e8-b90a455df21b/?app=oa1g8c",
       "itadUrl": "https://isthereanydeal.com/game/gear-club-unlimited-3-gear-club-signature-pack/",
-      "image": "",
+      "image": "https://assets.isthereanydeal.com/01a11a94-cab6-70a2-95b3-562be5d313e0/banner600.jpg?t=1791511829",
       "discount": 100,
       "price": "Free",
       "regularPrice": 4.99,
       "currency": "USD",
       "expiry": "2026-10-22T19:00:00+02:00",
       "timestamp": "2026-10-08T10:15:25+02:00",
-      "foundAt": "2026-10-09T01:38:57.371820+00:00"
+      "foundAt": "2026-10-09T08:19:50.240809+00:00"
     },
     {
       "id": "018d937f-6961-71a8-9e75-32395754dc80",
@@ -58,7 +58,7 @@
       "currency": "USD",
       "expiry": "2026-10-13T03:00:00+02:00",
       "timestamp": "2026-10-08T18:45:24+02:00",
-      "foundAt": "2026-10-09T01:38:57.371830+00:00"
+      "foundAt": "2026-10-09T08:19:50.240818+00:00"
     },
     {
       "id": "018d937f-2072-73fb-bb97-ac720e17b5e0",
@@ -73,8 +73,8 @@
       "currency": "USD",
       "expiry": "2026-10-12T19:00:00+02:00",
       "timestamp": "2026-10-08T22:05:22+02:00",
-      "foundAt": "2026-10-09T01:38:57.371835+00:00"
+      "foundAt": "2026-10-09T08:19:50.240824+00:00"
     }
   ],
-  "updatedAt": "2026-10-09T01:38:57.372682+00:00"
+  "updatedAt": "2026-10-09T08:19:50.241575+00:00"
 }
