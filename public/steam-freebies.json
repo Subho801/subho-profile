@@ -13,7 +13,7 @@
       "currency": "USD",
       "expiry": "2026-10-15T19:00:00+02:00",
       "timestamp": "2026-10-01T10:15:43+02:00",
-      "foundAt": "2026-10-09T15:26:21.906833+00:00"
+      "foundAt": "2026-10-09T20:13:05.262258+00:00"
     },
     {
       "id": "01a0f885-4d0e-70e9-bb60-6b1f0ed02128",
@@ -28,7 +28,7 @@
       "currency": "USD",
       "expiry": "2026-10-15T19:00:00+02:00",
       "timestamp": "2026-10-01T19:31:40+02:00",
-      "foundAt": "2026-10-09T15:26:21.906865+00:00"
+      "foundAt": "2026-10-09T20:13:05.262279+00:00"
     },
     {
       "id": "01a11a94-cab6-70a2-95b3-562be5d313e0",
@@ -43,7 +43,7 @@
       "currency": "USD",
       "expiry": "2026-10-22T19:00:00+02:00",
       "timestamp": "2026-10-08T10:15:25+02:00",
-      "foundAt": "2026-10-09T15:26:21.906869+00:00"
+      "foundAt": "2026-10-09T20:13:05.262282+00:00"
     },
     {
       "id": "018d937f-6961-71a8-9e75-32395754dc80",
@@ -58,7 +58,7 @@
       "currency": "USD",
       "expiry": "2026-10-13T03:00:00+02:00",
       "timestamp": "2026-10-08T18:45:24+02:00",
-      "foundAt": "2026-10-09T15:26:21.906878+00:00"
+      "foundAt": "2026-10-09T20:13:05.262290+00:00"
     },
     {
       "id": "018d937f-2072-73fb-bb97-ac720e17b5e0",
@@ -73,8 +73,23 @@
       "currency": "USD",
       "expiry": "2026-10-12T19:00:00+02:00",
       "timestamp": "2026-10-08T22:05:22+02:00",
-      "foundAt": "2026-10-09T15:26:21.906881+00:00"
+      "foundAt": "2026-10-09T20:13:05.262292+00:00"
+    },
+    {
+      "id": "01966c4d-d64f-73df-8ce1-86f6ad9d45b8",
+      "slug": "fireside-feelings",
+      "title": "Fireside Feelings",
+      "url": "https://itad.link/01a121aa-7eeb-7268-aa19-a14fcba3a792/?app=oa1g8c",
+      "itadUrl": "https://isthereanydeal.com/game/fireside-feelings/",
+      "image": "https://assets.isthereanydeal.com/01966c4d-d64f-73df-8ce1-86f6ad9d45b8/banner600.jpg?t=1789533010",
+      "discount": 100,
+      "price": "Free",
+      "regularPrice": 7.99,
+      "currency": "USD",
+      "expiry": "2026-10-12T19:00:00+02:00",
+      "timestamp": "2026-10-09T19:16:48+02:00",
+      "foundAt": "2026-10-09T20:13:05.262295+00:00"
     }
   ],
-  "updatedAt": "2026-10-09T15:26:21.907586+00:00"
+  "updatedAt": "2026-10-09T20:13:05.262986+00:00"
 }
