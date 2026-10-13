@@ -13,7 +13,7 @@
       "currency": "USD",
       "expiry": "2026-10-15T19:00:00+02:00",
       "timestamp": "2026-10-01T10:15:43+02:00",
-      "foundAt": "2026-10-12T23:42:06.102813+00:00"
+      "foundAt": "2026-10-13T05:01:39.881265+00:00"
     },
     {
       "id": "01a0f885-4d0e-70e9-bb60-6b1f0ed02128",
@@ -28,7 +28,7 @@
       "currency": "USD",
       "expiry": "2026-10-15T19:00:00+02:00",
       "timestamp": "2026-10-01T19:31:40+02:00",
-      "foundAt": "2026-10-12T23:42:06.102841+00:00"
+      "foundAt": "2026-10-13T05:01:39.881294+00:00"
     },
     {
       "id": "01a11a94-cab6-70a2-95b3-562be5d313e0",
@@ -43,22 +43,7 @@
       "currency": "USD",
       "expiry": "2026-10-22T19:00:00+02:00",
       "timestamp": "2026-10-08T10:15:25+02:00",
-      "foundAt": "2026-10-12T23:42:06.102850+00:00"
-    },
-    {
-      "id": "018d937f-6961-71a8-9e75-32395754dc80",
-      "slug": "world-of-warships-ning-hai",
-      "title": "World of Warships — Ning Hai",
-      "url": "https://itad.link/01a11c67-b661-7292-b8db-e2e7357d7300/?app=oa1g8c",
-      "itadUrl": "https://isthereanydeal.com/game/world-of-warships-ning-hai/",
-      "image": "https://assets.isthereanydeal.com/018d937f-6961-71a8-9e75-32395754dc80/banner600.jpg?t=1791480313",
-      "discount": 100,
-      "price": "Free",
-      "regularPrice": 11.2,
-      "currency": "USD",
-      "expiry": "2026-10-13T03:00:00+02:00",
-      "timestamp": "2026-10-08T18:45:24+02:00",
-      "foundAt": "2026-10-12T23:42:06.102860+00:00"
+      "foundAt": "2026-10-13T05:01:39.881304+00:00"
     },
     {
       "id": "01a0a54d-af79-7091-a031-8a8901f81683",
@@ -73,8 +58,8 @@
       "currency": "USD",
       "expiry": "2026-10-19T19:00:00+02:00",
       "timestamp": "2026-10-12T19:18:34+02:00",
-      "foundAt": "2026-10-12T23:42:06.102867+00:00"
+      "foundAt": "2026-10-13T05:01:39.881311+00:00"
     }
   ],
-  "updatedAt": "2026-10-12T23:42:06.103623+00:00"
+  "updatedAt": "2026-10-13T05:01:39.882154+00:00"
 }
