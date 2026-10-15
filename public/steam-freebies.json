@@ -13,7 +13,7 @@
       "currency": "USD",
       "expiry": "2026-10-22T19:00:00+02:00",
       "timestamp": "2026-10-08T10:15:25+02:00",
-      "foundAt": "2026-10-15T18:49:40.791336+00:00"
+      "foundAt": "2026-10-15T21:54:04.860666+00:00"
     },
     {
       "id": "01a0a54d-af79-7091-a031-8a8901f81683",
@@ -28,7 +28,7 @@
       "currency": "USD",
       "expiry": "2026-10-19T19:00:00+02:00",
       "timestamp": "2026-10-12T19:18:34+02:00",
-      "foundAt": "2026-10-15T18:49:40.791363+00:00"
+      "foundAt": "2026-10-15T21:54:04.860691+00:00"
     },
     {
       "id": "01a140c6-b96c-708c-b5ac-2b9f68a2bf59",
@@ -36,15 +36,15 @@
       "title": "Squad Weapon Skins - Recon Team Pack",
       "url": "https://itad.link/01a140c6-b96f-71c4-ac07-a2e6441664b4/?app=oa1g8c",
       "itadUrl": "https://isthereanydeal.com/game/squad-weapon-skins-recon-team-pack/",
-      "image": "",
+      "image": "https://assets.isthereanydeal.com/01a140c6-b96c-708c-b5ac-2b9f68a2bf59/banner600.jpg?t=1792093533",
       "discount": 100,
       "price": "Free",
       "regularPrice": 11.99,
       "currency": "USD",
       "expiry": "2026-10-25T19:00:00+01:00",
       "timestamp": "2026-10-15T20:15:39+02:00",
-      "foundAt": "2026-10-15T18:49:40.791372+00:00"
+      "foundAt": "2026-10-15T21:54:04.860698+00:00"
     }
   ],
-  "updatedAt": "2026-10-15T18:49:40.792229+00:00"
+  "updatedAt": "2026-10-15T21:54:04.861476+00:00"
 }
