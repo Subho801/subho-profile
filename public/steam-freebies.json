@@ -1,36 +1,6 @@
 {
   "items": [
     {
-      "id": "01a0f688-5e29-7086-bede-8aceef6e6d3f",
-      "slug": "mxgp-26-scrubdesignz-liveries",
-      "title": "MXGP 26 - Scrubdesignz Liveries",
-      "url": "https://itad.link/01a0f688-5e2a-708f-aae1-77c37d5337de/?app=oa1g8c",
-      "itadUrl": "https://isthereanydeal.com/game/mxgp-26-scrubdesignz-liveries/",
-      "image": "https://assets.isthereanydeal.com/01a0f688-5e29-7086-bede-8aceef6e6d3f/banner600.jpg?t=1790845517",
-      "discount": 100,
-      "price": "Free",
-      "regularPrice": 1.99,
-      "currency": "USD",
-      "expiry": "2026-10-15T19:00:00+02:00",
-      "timestamp": "2026-10-01T10:15:43+02:00",
-      "foundAt": "2026-10-15T14:36:28.391305+00:00"
-    },
-    {
-      "id": "01a0f885-4d0e-70e9-bb60-6b1f0ed02128",
-      "slug": "rotwood-drakin-armoury-pack",
-      "title": "Rotwood: Drakin Armoury Pack",
-      "url": "https://itad.link/01a0f885-4d10-7380-98a6-eac9e77f470a/?app=oa1g8c",
-      "itadUrl": "https://isthereanydeal.com/game/rotwood-drakin-armoury-pack/",
-      "image": "https://assets.isthereanydeal.com/01a0f885-4d0e-70e9-bb60-6b1f0ed02128/banner600.jpg?t=1790963734",
-      "discount": 100,
-      "price": "Free",
-      "regularPrice": 4.99,
-      "currency": "USD",
-      "expiry": "2026-10-15T19:00:00+02:00",
-      "timestamp": "2026-10-01T19:31:40+02:00",
-      "foundAt": "2026-10-15T14:36:28.391329+00:00"
-    },
-    {
       "id": "01a11a94-cab6-70a2-95b3-562be5d313e0",
       "slug": "gear-club-unlimited-3-gear-club-signature-pack",
       "title": "Gear.Club Unlimited 3 - Gear.Club Signature Pack",
@@ -43,7 +13,7 @@
       "currency": "USD",
       "expiry": "2026-10-22T19:00:00+02:00",
       "timestamp": "2026-10-08T10:15:25+02:00",
-      "foundAt": "2026-10-15T14:36:28.391336+00:00"
+      "foundAt": "2026-10-15T18:49:40.791336+00:00"
     },
     {
       "id": "01a0a54d-af79-7091-a031-8a8901f81683",
@@ -58,8 +28,23 @@
       "currency": "USD",
       "expiry": "2026-10-19T19:00:00+02:00",
       "timestamp": "2026-10-12T19:18:34+02:00",
-      "foundAt": "2026-10-15T14:36:28.391341+00:00"
+      "foundAt": "2026-10-15T18:49:40.791363+00:00"
+    },
+    {
+      "id": "01a140c6-b96c-708c-b5ac-2b9f68a2bf59",
+      "slug": "squad-weapon-skins-recon-team-pack",
+      "title": "Squad Weapon Skins - Recon Team Pack",
+      "url": "https://itad.link/01a140c6-b96f-71c4-ac07-a2e6441664b4/?app=oa1g8c",
+      "itadUrl": "https://isthereanydeal.com/game/squad-weapon-skins-recon-team-pack/",
+      "image": "",
+      "discount": 100,
+      "price": "Free",
+      "regularPrice": 11.99,
+      "currency": "USD",
+      "expiry": "2026-10-25T19:00:00+01:00",
+      "timestamp": "2026-10-15T20:15:39+02:00",
+      "foundAt": "2026-10-15T18:49:40.791372+00:00"
     }
   ],
-  "updatedAt": "2026-10-15T14:36:28.392153+00:00"
+  "updatedAt": "2026-10-15T18:49:40.792229+00:00"
 }
