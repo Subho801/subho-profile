@@ -45,6 +45,10 @@ export default function MicrosoftStorePage() {
 
         const json: MicrosoftResponse = await res.json();
 
+        if (!Array.isArray(json.games)) {
+          throw new Error("Invalid Microsoft Store feed format");
+        }
+
         if (!active) return;
 
         setData(json);
@@ -109,7 +113,7 @@ export default function MicrosoftStorePage() {
           </p>
 
           <div className="mt-7 grid gap-4 sm:grid-cols-2">
-            <Stat label="Free Games" value={loading ? "…" : games.length} />
+            <Stat label="Free Games" value={loading ? "…" : error ? "—" : games.length} />
             <Stat label="Provider" value="Microsoft Store" />
           </div>
 
@@ -153,29 +157,43 @@ export default function MicrosoftStorePage() {
             </p>
           </div>
         ) : error ? (
-          <div className="rounded-3xl border border-red-400/20 bg-red-400/[0.05] p-8">
-            <h3 className="text-lg font-bold text-red-300">
-              Could not load Microsoft Store freebies
+          <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-10 text-center">
+            <h3 className="text-xl font-bold">
+              Unable to check freebies
             </h3>
-            <p className="mt-2 text-sm text-zinc-400">
-              The feed may not exist yet, or GitHub could not be reached.
-              Check that microsoft.json has been generated and committed
-              to your notifier repository.
+
+            <p className="mt-2 text-sm text-zinc-500">
+              The Microsoft Store feed is temporarily unavailable. Please
+              try again later.
             </p>
+
             <button
               onClick={() => window.location.reload()}
-              className="mt-5 rounded-xl bg-cyan-400 px-5 py-3 text-sm font-black text-black transition hover:bg-cyan-300"
+              className="mt-5 rounded-xl bg-cyan-500 px-5 py-3 text-sm font-black text-black transition hover:bg-cyan-300"
             >
               Try Again
             </button>
           </div>
         ) : games.length === 0 ? (
-          <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-10 text-center">
-            <h3 className="text-xl font-bold">No freebies found</h3>
+          <div className="rounded-3xl border border-emerald-400/15 bg-emerald-400/[0.03] p-10 text-center">
+            <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-emerald-400/10">
+              <span className="text-2xl text-emerald-400">✓</span>
+            </div>
+
+            <h3 className="text-xl font-bold">
+              No Microsoft Store freebies right now
+            </h3>
+
             <p className="mt-2 text-sm text-zinc-500">
-              No paid games currently marked free were found in the latest
-              successful scan.
+              No paid games are currently available for free. Check back
+              after the next update.
             </p>
+
+            {lastUpdated && (
+              <p className="mt-4 text-xs text-zinc-600">
+                Last updated: {lastUpdated}
+              </p>
+            )}
           </div>
         ) : (
           <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
@@ -264,13 +282,16 @@ function GameCard({ game }: { game: MicrosoftGame }) {
           )}
         </div>
 
-        <h3 className="line-clamp-2 text-xl font-black">{game.title}</h3>
+        <h3 className="line-clamp-2 text-xl font-black">
+          {game.title}
+        </h3>
 
         <div className="mt-auto flex items-end justify-between gap-4 pt-6">
           <div className="min-w-0">
             <p className="text-sm font-bold text-emerald-400">
               {game.current_price || "FREE"}
             </p>
+
             <p className="mt-1 truncate text-xs text-zinc-500">
               Was: {game.original_price || "Paid"}
             </p>
