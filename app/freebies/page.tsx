@@ -39,6 +39,7 @@ export default async function FreebiesPage() {
         { name: "Medal TV", desc: "Quest rewards", icon: "/medal.png", isImage: true, href: "/freebies/medal" },
         { name: "AMD Rewards", desc: "Promo keys", icon: "/amd.png", isImage: true, href: "/freebies/amd" },
         { name: "Alienware Arena", desc: "Gaming keys", icon: "/alienware.png", isImage: true, href: "/freebies/alienware" },
+        { name: "KeyXP", desc: "Survey-based Steam key giveaways", icon: "/keyxp.png", isImage: true, href: "/freebies/keyxp" },
         { name: "ROG Elite", desc: "Regional rewards", icon: "/rog.png", isImage: true, href: "/freebies/rog" },
         { name: "HP OMEN", desc: "Reward drops", icon: "/omen.png", isImage: true, href: "/freebies/omen" },
         {
