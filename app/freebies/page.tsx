@@ -29,6 +29,13 @@ export default async function FreebiesPage() {
         { name: "GOG", desc: "DRM-free giveaways", icon: "/gog-logo.png", isImage: true, href: "/freebies/gog" },
         { name: "Microsoft Store", desc: "Store freebies", icon: "/microsoft-store.png", isImage: true, href: "/freebies/microsoft" },
         { name: "Prime Gaming", desc: "Monthly game claims", icon: "/prime-gaming.png", isImage: true, href: "/freebies/prime" },
+        {
+  name: "itch.io",
+  desc: "Limited-time free games",
+  icon: "/itchio.png"
+, isImage: true,
+  href: "/freebies/itchio",
+},
       ],
     },
     {
