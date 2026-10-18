@@ -45,25 +45,19 @@ export default function AlienwarePage() {
   if (!data) return [];
 
   return [...data.items].sort((a, b) => {
-    const score = (g: Giveaway) => {
-      let s = 0;
+    const dateA = Date.parse(a.publishedAt);
+    const dateB = Date.parse(b.publishedAt);
 
-      // Live giveaways first
-      if (g.keys_left !== null && g.keys_left > 0) s += 100;
+    // Newest published giveaways first.
+    // Put entries with invalid dates at the bottom.
+    const validA = Number.isFinite(dateA);
+    const validB = Number.isFinite(dateB);
 
-      // Steam games first
-      if (g.raw_title?.toLowerCase().includes("steam")) s += 50;
+    if (!validA && !validB) return 0;
+    if (!validA) return 1;
+    if (!validB) return -1;
 
-      // Game key giveaways
-      if (g.raw_title?.toLowerCase().includes("key giveaway")) s += 20;
-
-      // More keys = higher
-      s += g.keys_left ?? 0;
-
-      return s;
-    };
-
-    return score(b) - score(a);
+    return dateB - dateA;
   });
 }, [data]);
 const liveCount = giveaways.filter(
@@ -160,7 +154,7 @@ const totalKeys = giveaways.reduce(
             >
 
               <div className="text-2xl font-bold text-green-400">
-  🟢 {liveCount}
+  ✅ {liveCount}
 </div>
 
 <div className="text-sm text-zinc-500">

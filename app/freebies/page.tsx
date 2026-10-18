@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getIntel } from "./data/getIntel";
 
 const stats = [
@@ -9,9 +10,9 @@ const stats = [
 ];
 
 const featured = [
-  { name: "Epic Games", desc: "2 active freebies", meta: "Ends soon", icon: "🎮" },
-  { name: "Medal TV", desc: "Quest reward live", meta: "Claim now", icon: "🎖️" },
-  { name: "AMD Rewards", desc: "Promo keys available", meta: "Limited", icon: "🔥" },
+  { name: "Epic Games", desc: "2 active freebies", meta: "Ends soon", icon: "/epic.png", isImage: true },
+  { name: "Medal TV", desc: "Quest reward live", meta: "Claim now", icon: "/medal.png", isImage: true },
+  { name: "AMD Rewards", desc: "Promo keys available", meta: "Limited", icon: "/amd.png", isImage: true },
 ];
 
 export default async function FreebiesPage() {
@@ -23,11 +24,11 @@ export default async function FreebiesPage() {
       icon: "🎮",
       desc: "Official store freebies and 100% off games.",
       items: [
-        { name: "Epic Games", desc: "Weekly free games", icon: "🎁", href: "/freebies/epic" },
-        { name: "Steam 100% Off", desc: "Limited free-to-keep games", icon: "🧊", href: "/freebies/steam" },
-        { name: "GOG", desc: "DRM-free giveaways", icon: "💿", href: "/freebies/gog" },
-        { name: "Microsoft Store", desc: "Store freebies", icon: "🪟", href: "/freebies/microsoft" },
-        { name: "Prime Gaming", desc: "Monthly game claims", icon: "👑", href: "/freebies/prime" },
+        { name: "Epic Games", desc: "Weekly free games", icon: "/epic.png", isImage: true, href: "/freebies/epic" },
+        { name: "Steam 100% Off", desc: "Limited free-to-keep games", icon: "/steam-logo.png", isImage: true, href: "/freebies/steam" },
+        { name: "GOG", desc: "DRM-free giveaways", icon: "/gog-logo.png", isImage: true, href: "/freebies/gog" },
+        { name: "Microsoft Store", desc: "Store freebies", icon: "/microsoft-store.png", isImage: true, href: "/freebies/microsoft" },
+        { name: "Prime Gaming", desc: "Monthly game claims", icon: "/prime-gaming.png", isImage: true, href: "/freebies/prime" },
       ],
     },
     {
@@ -35,17 +36,18 @@ export default async function FreebiesPage() {
       icon: "🔑",
       desc: "Limited keys, rewards and promo drops.",
       items: [
-        { name: "Medal TV", desc: "Quest rewards", icon: "🎖️", href: "/freebies/medal" },
-        { name: "AMD Rewards", desc: "Promo keys", icon: "🔥", href: "/freebies/amd" },
-        { name: "Alienware Arena", desc: "Gaming keys", icon: "👽", href: "/freebies/alienware" },
-        { name: "ROG Elite", desc: "Regional rewards", icon: "⚡", href: "/freebies/rog" },
-        { name: "HP OMEN", desc: "Reward drops", icon: "💎", href: "/freebies/omen" },
+        { name: "Medal TV", desc: "Quest rewards", icon: "/medal.png", isImage: true, href: "/freebies/medal" },
+        { name: "AMD Rewards", desc: "Promo keys", icon: "/amd.png", isImage: true, href: "/freebies/amd" },
+        { name: "Alienware Arena", desc: "Gaming keys", icon: "/alienware.png", isImage: true, href: "/freebies/alienware" },
+        { name: "ROG Elite", desc: "Regional rewards", icon: "/rog.png", isImage: true, href: "/freebies/rog" },
+        { name: "HP OMEN", desc: "Reward drops", icon: "/omen.png", isImage: true, href: "/freebies/omen" },
         {
-          name: intel?.source ?? "Intel Gaming Access",
-          desc: intel?.title ?? "Intel promos",
-          icon: "🔵",
-          href: "/freebies/intel",
-        },
+  name: intel?.source ?? "Intel Gaming Access",
+  desc: intel?.title ?? "Intel promos",
+  icon: "/intel.png",
+  isImage: true,
+  href: "/freebies/intel",
+},
       ],
     },
     {
@@ -53,10 +55,10 @@ export default async function FreebiesPage() {
       icon: "🎁",
       desc: "Community and third-party giveaways.",
       items: [
-        { name: "Zeros Group", desc: "Community drops", icon: "🟣", href: "#" },
-        { name: "FreeRU", desc: "Free key posts", icon: "🔴", href: "#" },
-        { name: "Gleam Campaigns", desc: "Entry-based giveaways", icon: "✨", href: "/freebies/gleam" },
-        { name: "Discord Giveaways", desc: "Server giveaways", icon: "💬", href: "#" },
+        { name: "Zeros Group", desc: "Community drops", icon: "/zeros.png", isImage: true, href: "#" },
+        { name: "FreeRU", desc: "Free key posts", icon: "/freeru.png", isImage: true, href: "#" },
+        { name: "Gleam Campaigns", desc: "Entry-based giveaways", icon: "/gleam-logo.png", isImage: true, href: "/freebies/gleam" },
+        { name: "Discord Giveaways", desc: "Server giveaways", icon: "/discord-logo.png", isImage: true, href: "#" },
       ],
     },
     {
@@ -65,9 +67,9 @@ export default async function FreebiesPage() {
       desc: "Upcoming, leaked or not-yet-claimable rewards.",
       items: [
         { name: "Epic Mystery Games", desc: "Vault leaks", icon: "🔮", href: "#" },
-        { name: "AMD Upcoming", desc: "Future rewards", icon: "🔥", href: "#" },
+        { name: "AMD Upcoming", desc: "Future rewards", icon: "/amd2.png", isImage: true, href: "#" },
         { name: "Alienware Upcoming", desc: "Upcoming key drops", icon: "👽", href: "#" },
-        { name: "ROG Upcoming", desc: "Future region rewards", icon: "⚡", href: "#" },
+        { name: "ROG Upcoming", desc: "Future region rewards", icon: "/rog2.png", isImage: true, href: "#" },
       ],
     },
   ];
@@ -120,9 +122,19 @@ export default async function FreebiesPage() {
                 className="group rounded-3xl border border-white/10 bg-white/[0.04] p-5 transition hover:border-lime-400/30 hover:bg-white/[0.06]"
               >
                 <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-black/30 text-2xl">
-                    {item.icon}
-                  </div>
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-black/30">
+  {"isImage" in item && item.isImage ? (
+    <Image
+      src={item.icon}
+      alt={item.name}
+      width={30}
+      height={30}
+      className="object-contain"
+    />
+  ) : (
+    <span className="text-2xl">{item.icon}</span>
+  )}
+</div>
 
                   <div className="min-w-0">
                     <h3 className="font-semibold group-hover:text-lime-300">
@@ -165,9 +177,19 @@ export default async function FreebiesPage() {
                     className="group rounded-2xl border border-white/10 bg-black/25 p-4 transition hover:border-lime-400/25 hover:bg-black/35"
                   >
                     <div className="flex items-center gap-3">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/[0.06] text-xl">
-                        {item.icon}
-                      </div>
+                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/[0.06]">
+  {"isImage" in item && item.isImage ? (
+    <Image
+      src={item.icon}
+      alt={item.name}
+      width={28}
+      height={28}
+      className="object-contain"
+    />
+  ) : (
+    <span className="text-xl">{item.icon}</span>
+  )}
+</div>
 
                       <div className="min-w-0">
                         <h3 className="truncate text-sm font-semibold group-hover:text-lime-300">
