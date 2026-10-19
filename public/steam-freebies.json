@@ -13,22 +13,7 @@
       "currency": "USD",
       "expiry": "2026-10-22T19:00:00+02:00",
       "timestamp": "2026-10-08T10:15:25+02:00",
-      "foundAt": "2026-10-19T14:15:23.591475+00:00"
-    },
-    {
-      "id": "01a0a54d-af79-7091-a031-8a8901f81683",
-      "slug": "voidtrain-big-catch",
-      "title": "Voidtrain - Big Catch",
-      "url": "https://itad.link/01a1311d-0e15-7251-bf7f-c3caf7c1ee4c/?app=oa1g8c",
-      "itadUrl": "https://isthereanydeal.com/game/voidtrain-big-catch/",
-      "image": "https://assets.isthereanydeal.com/01a0a54d-af79-7091-a031-8a8901f81683/banner600.jpg?t=1791837923",
-      "discount": 100,
-      "price": "Free",
-      "regularPrice": 7.99,
-      "currency": "USD",
-      "expiry": "2026-10-19T19:00:00+02:00",
-      "timestamp": "2026-10-12T19:18:34+02:00",
-      "foundAt": "2026-10-19T14:15:23.591531+00:00"
+      "foundAt": "2026-10-19T20:02:21.361359+00:00"
     },
     {
       "id": "01a140c6-b96c-708c-b5ac-2b9f68a2bf59",
@@ -43,8 +28,8 @@
       "currency": "USD",
       "expiry": "2026-10-25T19:00:00+01:00",
       "timestamp": "2026-10-15T20:15:39+02:00",
-      "foundAt": "2026-10-19T14:15:23.591539+00:00"
+      "foundAt": "2026-10-19T20:02:21.361377+00:00"
     }
   ],
-  "updatedAt": "2026-10-19T14:15:23.592328+00:00"
+  "updatedAt": "2026-10-19T20:02:21.361868+00:00"
 }
