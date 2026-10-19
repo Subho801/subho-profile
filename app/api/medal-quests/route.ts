@@ -1,6 +1,6 @@
-export async function GET() {
+﻿export async function GET() {
   const fetchQuests = async (state: "active" | "ended") => {
-    const url = "https://medal.tv/api/v2/quests?limit=100&state=" + state;
+    const url = `https://medal.tv/api/v2/quests?limit=100&state=${state}`;
 
     const response = await fetch(url, {
       headers: {
@@ -10,41 +10,59 @@ export async function GET() {
       cache: "no-store",
     });
 
-    const data = await response.json();
-
     if (!response.ok) {
+      const details = await response.text();
       throw new Error(
-        `Medal ${state} quests failed: ${JSON.stringify(data)}`
+        `Medal ${state} quests failed: HTTP ${response.status}: ${details.slice(0, 300)}`
       );
     }
 
+    const data = await response.json();
     return Array.isArray(data.items) ? data.items : [];
   };
 
-  try {
-    const [active, ended] = await Promise.all([
-      fetchQuests("active"),
-      fetchQuests("ended"),
-    ]);
+  const [activeResult, endedResult] = await Promise.allSettled([
+    fetchQuests("active"),
+    fetchQuests("ended"),
+  ]);
 
-    return Response.json({
-      active,
-      expired: ended,
-      counts: {
-        active: active.length,
-        ended: ended.length,
-      },
-    });
-  } catch (error) {
-    console.error("Medal quests API error:", error);
+  const active =
+    activeResult.status === "fulfilled" ? activeResult.value : [];
+  const expired =
+    endedResult.status === "fulfilled" ? endedResult.value : [];
+
+  if (activeResult.status === "rejected") {
+    console.error("Medal active quests API error:", activeResult.reason);
 
     return Response.json(
       {
-        error: "Failed to fetch Medal quests",
+        error: "Failed to fetch active Medal quests",
         details:
-          error instanceof Error ? error.message : "Unknown error",
+          activeResult.reason instanceof Error
+            ? activeResult.reason.message
+            : "Unknown error",
       },
-      { status: 500 }
+      { status: 502 }
     );
   }
+
+  if (endedResult.status === "rejected") {
+    console.warn(
+      "Medal ended quests unavailable; continuing with active quests:",
+      endedResult.reason
+    );
+  }
+
+  return Response.json({
+    active,
+    expired,
+    warnings:
+      endedResult.status === "rejected"
+        ? ["Expired quests are temporarily unavailable from Medal."]
+        : [],
+    counts: {
+      active: active.length,
+      ended: expired.length,
+    },
+  });
 }
