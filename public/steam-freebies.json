@@ -1,21 +1,6 @@
 {
   "items": [
     {
-      "id": "01a11a94-cab6-70a2-95b3-562be5d313e0",
-      "slug": "gear-club-unlimited-3-gear-club-signature-pack",
-      "title": "Gear.Club Unlimited 3 - Gear.Club Signature Pack",
-      "url": "https://itad.link/01a11a94-cab8-717d-86e8-b90a455df21b/?app=oa1g8c",
-      "itadUrl": "https://isthereanydeal.com/game/gear-club-unlimited-3-gear-club-signature-pack/",
-      "image": "https://assets.isthereanydeal.com/01a11a94-cab6-70a2-95b3-562be5d313e0/banner600.jpg?t=1791511829",
-      "discount": 100,
-      "price": "Free",
-      "regularPrice": 4.99,
-      "currency": "USD",
-      "expiry": "2026-10-22T19:00:00+02:00",
-      "timestamp": "2026-10-08T10:15:25+02:00",
-      "foundAt": "2026-10-22T17:26:18.207207+00:00"
-    },
-    {
       "id": "01a140c6-b96c-708c-b5ac-2b9f68a2bf59",
       "slug": "squad-weapon-skins-recon-team-pack",
       "title": "Squad Weapon Skins - Recon Team Pack",
@@ -28,7 +13,7 @@
       "currency": "USD",
       "expiry": "2026-10-25T19:00:00+01:00",
       "timestamp": "2026-10-15T20:15:39+02:00",
-      "foundAt": "2026-10-22T17:26:18.207235+00:00"
+      "foundAt": "2026-10-22T20:41:32.593027+00:00"
     },
     {
       "id": "01a144be-ebb9-721f-b0bd-8eedefa080fd",
@@ -36,15 +21,15 @@
       "title": "Popcorn & Premieren - Ausgehviertel",
       "url": "https://itad.link/01a1649c-ae8b-70a1-9abc-b9e7f044d7ca/?app=oa1g8c",
       "itadUrl": "https://isthereanydeal.com/game/popcorn-and-premieren-ausgehviertel/",
-      "image": "",
+      "image": "https://assets.isthereanydeal.com/01a144be-ebb9-721f-b0bd-8eedefa080fd/banner600.jpg?t=1792692334",
       "discount": 100,
       "price": "Free",
       "regularPrice": 4.99,
       "currency": "USD",
       "expiry": "2026-10-29T18:00:00+01:00",
       "timestamp": "2026-10-22T19:17:58+02:00",
-      "foundAt": "2026-10-22T17:26:18.207241+00:00"
+      "foundAt": "2026-10-22T20:41:32.593051+00:00"
     }
   ],
-  "updatedAt": "2026-10-22T17:26:18.208072+00:00"
+  "updatedAt": "2026-10-22T20:41:32.593681+00:00"
 }
