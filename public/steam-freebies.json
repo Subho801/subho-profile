@@ -13,8 +13,23 @@
       "currency": "USD",
       "expiry": "2026-10-29T18:00:00+01:00",
       "timestamp": "2026-10-22T19:17:58+02:00",
-      "foundAt": "2026-10-29T06:08:17.417117+00:00"
+      "foundAt": "2026-10-29T13:27:59.169442+00:00"
+    },
+    {
+      "id": "01a186f1-49d8-7390-93fc-cf3858077222",
+      "slug": "hunting-simulator-3-classic-american-hunter-pack",
+      "title": "Hunting Simulator 3 - Classic American Hunter Pack",
+      "url": "https://itad.link/01a186f1-49da-716c-82f0-b9020510966f/?app=oa1g8c",
+      "itadUrl": "https://isthereanydeal.com/game/hunting-simulator-3-classic-american-hunter-pack/",
+      "image": "https://assets.isthereanydeal.com/01a186f1-49d8-7390-93fc-cf3858077222/banner600.jpg?t=1793270117",
+      "discount": 100,
+      "price": "Free",
+      "regularPrice": 4.99,
+      "currency": "USD",
+      "expiry": "2026-11-12T19:00:00+01:00",
+      "timestamp": "2026-10-29T10:18:19+01:00",
+      "foundAt": "2026-10-29T13:27:59.169467+00:00"
     }
   ],
-  "updatedAt": "2026-10-29T06:08:17.417835+00:00"
+  "updatedAt": "2026-10-29T13:27:59.170252+00:00"
 }
