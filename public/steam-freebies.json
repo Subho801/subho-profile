@@ -13,7 +13,7 @@
       "currency": "USD",
       "expiry": "2026-11-12T19:00:00+01:00",
       "timestamp": "2026-10-29T10:18:19+01:00",
-      "foundAt": "2026-10-30T16:08:24.195828+00:00"
+      "foundAt": "2026-10-30T20:57:15.959030+00:00"
     },
     {
       "id": "018d937f-155f-7382-a1c1-393634586f4e",
@@ -28,8 +28,23 @@
       "currency": "USD",
       "expiry": "2026-10-31T18:00:00+01:00",
       "timestamp": "2026-10-29T18:16:41+01:00",
-      "foundAt": "2026-10-30T16:08:24.195851+00:00"
+      "foundAt": "2026-10-30T20:57:15.959056+00:00"
+    },
+    {
+      "id": "018d975c-8236-72df-91a0-fd5b430b76f3",
+      "slug": "asleep-ato-1",
+      "title": "Asleep - Ato 1",
+      "url": "https://itad.link/01a18dce-ec11-711c-8de0-639aea883129/?app=oa1g8c",
+      "itadUrl": "https://isthereanydeal.com/game/asleep-ato-1/",
+      "image": "https://assets.isthereanydeal.com/018d975c-8236-72df-91a0-fd5b430b76f3/banner600.jpg?t=1793385618",
+      "discount": 100,
+      "price": "Free",
+      "regularPrice": 9.99,
+      "currency": "USD",
+      "expiry": "2026-11-02T19:00:00+01:00",
+      "timestamp": "2026-10-30T18:18:59+01:00",
+      "foundAt": "2026-10-30T20:57:15.959060+00:00"
     }
   ],
-  "updatedAt": "2026-10-30T16:08:24.196529+00:00"
+  "updatedAt": "2026-10-30T20:57:15.959793+00:00"
 }
