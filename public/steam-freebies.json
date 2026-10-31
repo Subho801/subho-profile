@@ -13,22 +13,7 @@
       "currency": "USD",
       "expiry": "2026-11-12T19:00:00+01:00",
       "timestamp": "2026-10-29T10:18:19+01:00",
-      "foundAt": "2026-10-31T12:54:17.398208+00:00"
-    },
-    {
-      "id": "018d937f-155f-7382-a1c1-393634586f4e",
-      "slug": "hexologic",
-      "title": "Hexologic",
-      "url": "https://itad.link/01a188a8-e549-710d-974c-ae30e4c6bac4/?app=oa1g8c",
-      "itadUrl": "https://isthereanydeal.com/game/hexologic/",
-      "image": "https://assets.isthereanydeal.com/018d937f-155f-7382-a1c1-393634586f4e/banner600.jpg?t=1793297119",
-      "discount": 100,
-      "price": "Free",
-      "regularPrice": 4.99,
-      "currency": "USD",
-      "expiry": "2026-10-31T18:00:00+01:00",
-      "timestamp": "2026-10-29T18:16:41+01:00",
-      "foundAt": "2026-10-31T12:54:17.398231+00:00"
+      "foundAt": "2026-10-31T17:28:31.105820+00:00"
     },
     {
       "id": "018d975c-8236-72df-91a0-fd5b430b76f3",
@@ -43,8 +28,8 @@
       "currency": "USD",
       "expiry": "2026-11-02T19:00:00+01:00",
       "timestamp": "2026-10-30T18:18:59+01:00",
-      "foundAt": "2026-10-31T12:54:17.398238+00:00"
+      "foundAt": "2026-10-31T17:28:31.105847+00:00"
     }
   ],
-  "updatedAt": "2026-10-31T12:54:17.399013+00:00"
+  "updatedAt": "2026-10-31T17:28:31.106737+00:00"
 }
