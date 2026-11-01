@@ -20,9 +20,9 @@ export async function GET() {
   `;
 
   return new NextResponse(svg, {
-    headers: {
-      "Content-Type": "image/svg+xml",
-      "Cache-Control": "public, max-age=1800, s-maxage=1800",
-    },
-  });
+      headers: {
+        "Content-Type": "image/svg+xml",
+        "Cache-Control": "no-cache, no-store, must-revalidate, max-age=0",
+      },
+    });
 }
